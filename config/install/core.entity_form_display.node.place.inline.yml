@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.inline
+    - field.field.node.place.field_alternate_name
+    - field.field.node.place.field_description
+    - node.type.place
+  enforced:
+    module:
+      - dragomans
+id: node.place.inline
+targetEntityType: node
+bundle: place
+mode: inline
+content:
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_alternate_name: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

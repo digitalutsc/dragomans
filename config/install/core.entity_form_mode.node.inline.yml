@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.inline
+label: inline
+targetEntityType: node
+cache: true

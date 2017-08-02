@@ -1,0 +1,84 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.inline
+    - field.field.node.person.field_event
+    - field.field.node.person.field_family_name
+    - field.field.node.person.field_given_name
+    - field.field.node.person.field_language
+    - field.field.node.person.field_name_part_terms_of_address
+    - node.type.person
+  enforced:
+    module:
+      - dragomans
+  module:
+    - ief_table_view_mode
+    - path
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  field_event:
+    weight: 5
+    settings:
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: '1'
+      allow_existing: '1'
+      match_operator: STARTS_WITH
+      override_labels: 0
+    third_party_settings: {  }
+    type: inline_entity_form_complex_table_view_mode
+    region: content
+  field_family_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_given_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_language:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_name_part_terms_of_address:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

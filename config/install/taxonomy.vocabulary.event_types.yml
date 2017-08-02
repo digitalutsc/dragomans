@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: 
+  enforced:
+    module:
+      - dragomans
+name: 'Event Types'
+vid: event_types
+description: 'Event Types'
+hierarchy: 0
+weight: 0

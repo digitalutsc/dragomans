@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.event
+targetEntityType: node
+bundle: event
+types:
+  - 'schema:event'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:name'
+  field_event_type:
+    properties:
+      - 'dcterms:type'
+  field_event_description:
+    properties:
+      - dcterms.description
+  field_image:
+    properties:
+      - 'schema:image'
+  field_tags:
+    properties:
+      - 'schema:about'

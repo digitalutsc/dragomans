@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date_iso
+    - node.type.event
+  enforced:
+    module:
+      - dragomans
+  module:
+    - datetime
+id: node.event.field_end_date_iso
+field_name: field_end_date_iso
+entity_type: node
+bundle: event
+label: 'Event End Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.place
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.place
+targetEntityType: node
+bundle: place
+types:
+  - 'schema:place'
+fieldMappings:
+  title:
+    properties:
+      - 'dc:title'
+  field_alternate_name:
+    properties:
+      - 'schema:alternateName'
+  field_place_description:
+    properties:
+      - 'schema:description'

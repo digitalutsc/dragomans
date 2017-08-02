@@ -1,0 +1,14 @@
+{
+  "name": "drupal/dragomans",
+  "type": "drupal-module",
+  "description": "Dragomans",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/dragomans",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/dragomans",
+    "source": "http://cgit.drupalcode.org/dragomans"
+  },
+  "require": { }
+}
