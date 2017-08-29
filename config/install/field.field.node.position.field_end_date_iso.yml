@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date_iso
+    - node.type.position
+  module:
+    - datetime
+id: node.position.field_end_date_iso
+field_name: field_end_date_iso
+entity_type: node
+bundle: position
+label: 'Position End Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

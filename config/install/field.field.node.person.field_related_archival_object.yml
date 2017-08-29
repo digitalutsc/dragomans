@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_archival_object
+    - node.type.archival_object
+    - node.type.person
+id: node.person.field_related_archival_object
+field_name: field_related_archival_object
+entity_type: node
+bundle: person
+label: 'Related Archival Objects'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      archival_object: archival_object
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

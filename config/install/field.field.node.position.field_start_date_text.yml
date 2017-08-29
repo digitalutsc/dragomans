@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_date_text
+    - node.type.position
+id: node.position.field_start_date_text
+field_name: field_start_date_text
+entity_type: node
+bundle: position
+label: 'Position Start Date (Text)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

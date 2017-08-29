@@ -3,10 +3,12 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.inline
+    - field.field.node.event.field_agency
     - field.field.node.event.field_description
     - field.field.node.event.field_end_date_iso
     - field.field.node.event.field_end_date_text
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_notes
     - field.field.node.event.field_place
     - field.field.node.event.field_start_date_iso
     - field.field.node.event.field_start_date_text
@@ -43,8 +45,10 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_agency: true
   field_end_date_iso: true
   field_end_date_text: true
+  field_notes: true
   field_place: true
   field_start_date_iso: true
   field_start_date_text: true

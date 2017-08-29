@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Professions
+vid: professions
+description: Professions
+hierarchy: 0
+weight: 0

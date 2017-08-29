@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.agency
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.agency
+targetEntityType: node
+bundle: agency
+types:
+  - 'schema:organization'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:organization'
+  field_description:
+    properties:
+      - 'schema:description'
+  field_place:
+    properties:
+      - 'schema:place'
+  field_notes:
+    properties:
+      - 'dbpedia-owl:notes'

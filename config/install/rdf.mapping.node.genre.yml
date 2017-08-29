@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.genre
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.genre
+targetEntityType: node
+bundle: genre
+types:
+  - 'dbpedia-owl:Genre'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:genre'
+  field_place_description:
+    properties:
+      - 'schema:description'
+  field_notes:
+    properties:
+      - 'dbpedia-owl:notes'

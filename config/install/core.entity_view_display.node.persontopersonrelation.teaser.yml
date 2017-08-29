@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.persontopersonrelation.field_person
+    - node.type.persontopersonrelation
+  module:
+    - user
+id: node.persontopersonrelation.teaser
+targetEntityType: node
+bundle: persontopersonrelation
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_person: true

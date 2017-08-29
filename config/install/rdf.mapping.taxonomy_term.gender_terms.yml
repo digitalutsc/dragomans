@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.gender_terms
+  module:
+    - taxonomy
+id: taxonomy_term.gender_terms
+targetEntityType: taxonomy_term
+bundle: gender_terms
+types:
+  - 'schema:GenderType'
+fieldMappings:
+  name:
+    properties:
+      - 'schema:gender'
+  description:
+    properties:
+      - 'schema:description'

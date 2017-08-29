@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.personhonorificrelation
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.personhonorificrelation
+targetEntityType: node
+bundle: personhonorificrelation
+types:
+  - 'schema:Thing'
+fieldMappings:
+  title:
+    properties:
+      - 'dragomans:personhonorificrelation'
+  field_honorific:
+    properties:
+      - 'schema:honorificPrefix'
+  field_related_person:
+    properties:
+      - 'schema:person'

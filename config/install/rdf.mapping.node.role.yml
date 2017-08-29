@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.role
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.role
+targetEntityType: node
+bundle: role
+types:
+  - 'schema:Thing'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:relatedTo'
+  field_description:
+    properties:
+      - 'schema:description'
+  field_notes:
+    properties:
+      - 'dbpedia-owl:notes'

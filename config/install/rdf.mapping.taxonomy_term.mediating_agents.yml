@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.mediating_agents
+  module:
+    - taxonomy
+id: taxonomy_term.mediating_agents
+targetEntityType: taxonomy_term
+bundle: mediating_agents
+types:
+  - 'schema:Person '
+fieldMappings:
+  name:
+    properties:
+      - 'schema:agent'
+  description:
+    properties:
+      - 'schema:description'

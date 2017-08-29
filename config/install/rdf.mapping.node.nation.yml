@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.nation
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.nation
+targetEntityType: node
+bundle: nation
+types:
+  - 'schema:Country'
+fieldMappings:
+  title:
+    properties:
+      - 'dbpedia-owl:nation'
+  field_description:
+    properties:
+      - 'schema:description'
+  field_notes:
+    properties:
+      - 'dbpedia-owl:notes'
