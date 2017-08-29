@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.archival_identifiers
+  module:
+    - taxonomy
+id: taxonomy_term.archival_identifiers
+targetEntityType: taxonomy_term
+bundle: archival_identifiers
+types:
+  - 'schema:CreativeWork '
+fieldMappings:
+  name:
+    properties:
+      - 'schema:identifier'
+  description:
+    properties:
+      - 'schema:description'

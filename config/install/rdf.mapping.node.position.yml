@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.position
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.position
+targetEntityType: node
+bundle: position
+types:
+  - 'schema:Thing'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:jobTitle'
+  field_agency:
+    properties:
+      - 'schema:affiliation'

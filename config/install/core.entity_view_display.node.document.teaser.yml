@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.document.field_agencies_addressed
+    - field.field.node.document.field_date
+    - field.field.node.document.field_english_summary
+    - field.field.node.document.field_genre
+    - field.field.node.document.field_person_honorific_relation
+    - field.field.node.document.field_place
+    - field.field.node.document.field_place_document_sent
+    - field.field.node.document.field_related_archival_object
+    - field.field.node.document.field_subject_agencies
+    - field.field.node.document.field_subject_places
+    - field.field.node.document.field_topics
+    - field.field.node.document.field_transcription
+    - field.field.node.document.field_transliteration
+    - node.type.document
+  module:
+    - user
+id: node.document.teaser
+targetEntityType: node
+bundle: document
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_agencies_addressed: true
+  field_date: true
+  field_english_summary: true
+  field_genre: true
+  field_person_honorific_relation: true
+  field_place: true
+  field_place_document_sent: true
+  field_related_archival_object: true
+  field_subject_agencies: true
+  field_subject_places: true
+  field_topics: true
+  field_transcription: true
+  field_transliteration: true

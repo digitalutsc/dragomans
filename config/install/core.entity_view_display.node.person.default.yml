@@ -2,11 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.person.field_alternate_family_name
+    - field.field.node.person.field_alternate_given_name
+    - field.field.node.person.field_alternate_terms_of_address
     - field.field.node.person.field_event
     - field.field.node.person.field_family_name
+    - field.field.node.person.field_gender
     - field.field.node.person.field_given_name
     - field.field.node.person.field_language
-    - field.field.node.person.field_name_part_terms_of_address
+    - field.field.node.person.field_nation
+    - field.field.node.person.field_p2p_role_relation
+    - field.field.node.person.field_position
+    - field.field.node.person.field_profession
+    - field.field.node.person.field_related_archival_object
+    - field.field.node.person.field_terms_of_address
     - node.type.person
   enforced:
     module:
@@ -18,8 +27,32 @@ targetEntityType: node
 bundle: person
 mode: default
 content:
-  field_event:
+  field_alternate_family_name:
     weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_alternate_given_name:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_alternate_terms_of_address:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_event:
+    weight: 7
     label: above
     settings:
       view_mode: inline
@@ -35,6 +68,14 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_gender:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_given_name:
     weight: 1
     label: above
@@ -44,14 +85,54 @@ content:
     type: string
     region: content
   field_language:
-    weight: 5
+    weight: 12
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_name_part_terms_of_address:
+  field_nation:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_p2p_role_relation:
+    weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_position:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_profession:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_related_archival_object:
+    weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_terms_of_address:
     weight: 3
     label: above
     settings:

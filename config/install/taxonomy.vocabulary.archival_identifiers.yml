@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Archival Identifiers'
+vid: archival_identifiers
+description: 'Archival Identifiers'
+hierarchy: 0
+weight: 0

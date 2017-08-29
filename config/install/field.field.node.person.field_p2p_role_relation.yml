@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_p2p_role_relation
+    - node.type.person
+    - node.type.persontopersonrelation
+id: node.person.field_p2p_role_relation
+field_name: field_p2p_role_relation
+entity_type: node
+bundle: person
+label: 'Related People'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      persontopersonrelation: persontopersonrelation
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

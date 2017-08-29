@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.agency.field_notes
+    - field.field.node.agency.field_place
+    - node.type.agency
+  module:
+    - user
+id: node.agency.teaser
+targetEntityType: node
+bundle: agency
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_notes: true
+  field_place: true

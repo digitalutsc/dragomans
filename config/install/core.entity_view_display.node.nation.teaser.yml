@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.nation.field_notes
+    - node.type.nation
+  module:
+    - user
+id: node.nation.teaser
+targetEntityType: node
+bundle: nation
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_notes: true

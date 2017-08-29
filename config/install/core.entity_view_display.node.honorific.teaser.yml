@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.honorific.field_notes
+    - node.type.honorific
+  module:
+    - user
+id: node.honorific.teaser
+targetEntityType: node
+bundle: honorific
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_notes: true

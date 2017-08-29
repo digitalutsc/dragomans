@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date_text
+    - node.type.position
+id: node.position.field_end_date_text
+field_name: field_end_date_text
+entity_type: node
+bundle: position
+label: 'Position End Date (Text)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

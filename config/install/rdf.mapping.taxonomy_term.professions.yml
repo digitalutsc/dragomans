@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.professions
+  module:
+    - taxonomy
+id: taxonomy_term.professions
+targetEntityType: taxonomy_term
+bundle: professions
+types:
+  - 'schema:ProfessionalService'
+fieldMappings:
+  name:
+    properties:
+      - 'dbpedia-owl:profession'
+  description:
+    properties:
+      - 'schema:description'

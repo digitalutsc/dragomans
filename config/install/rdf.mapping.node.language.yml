@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.language
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.language
+targetEntityType: node
+bundle: language
+types:
+  - 'crm:E56_Language'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:language'
+  field_description:
+    properties:
+      - 'schema:description'
+  field_notes:
+    properties:
+      - 'dbpedia-owl:notes'

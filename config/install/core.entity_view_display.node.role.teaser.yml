@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.role.field_description
+    - field.field.node.role.field_notes
+    - node.type.role
+  module:
+    - user
+id: node.role.teaser
+targetEntityType: node
+bundle: role
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_notes: true

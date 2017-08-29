@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.honorific
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.honorific
+targetEntityType: node
+bundle: honorific
+types:
+  - 'schema:Thing'
+fieldMappings:
+  title:
+    properties:
+      - 'dcterms:honorificPrefix'
+  field_notes:
+    properties:
+      - 'dbpedia-owl:notes'

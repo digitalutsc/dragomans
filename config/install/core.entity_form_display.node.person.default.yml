@@ -3,35 +3,74 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.inline
+    - field.field.node.person.field_alternate_family_name
+    - field.field.node.person.field_alternate_given_name
+    - field.field.node.person.field_alternate_terms_of_address
     - field.field.node.person.field_event
     - field.field.node.person.field_family_name
+    - field.field.node.person.field_gender
     - field.field.node.person.field_given_name
     - field.field.node.person.field_language
-    - field.field.node.person.field_name_part_terms_of_address
+    - field.field.node.person.field_nation
+    - field.field.node.person.field_p2p_role_relation
+    - field.field.node.person.field_position
+    - field.field.node.person.field_profession
+    - field.field.node.person.field_related_archival_object
+    - field.field.node.person.field_terms_of_address
     - node.type.person
   enforced:
     module:
       - dragomans
   module:
-    - ief_table_view_mode
+    - inline_entity_form
     - path
 id: node.person.default
 targetEntityType: node
 bundle: person
 mode: default
 content:
-  field_event:
+  created:
+    type: datetime_timestamp
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_alternate_family_name:
     weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_alternate_given_name:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_alternate_terms_of_address:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_event:
+    weight: 11
     settings:
       form_mode: inline
       label_singular: ''
       label_plural: ''
-      allow_new: '1'
-      allow_existing: '1'
+      allow_new: true
+      allow_existing: true
       match_operator: STARTS_WITH
-      override_labels: 0
+      override_labels: false
     third_party_settings: {  }
-    type: inline_entity_form_complex_table_view_mode
+    type: inline_entity_form_complex
     region: content
   field_family_name:
     weight: 2
@@ -40,6 +79,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_gender:
+    weight: 7
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
     region: content
   field_given_name:
     weight: 1
@@ -50,12 +102,84 @@ content:
     type: string_textfield
     region: content
   field_language:
-    weight: 4
-    settings: {  }
+    weight: 8
+    settings:
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
     third_party_settings: {  }
-    type: options_select
+    type: inline_entity_form_complex
     region: content
-  field_name_part_terms_of_address:
+  field_nation:
+    weight: 9
+    settings:
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_p2p_role_relation:
+    weight: 14
+    settings:
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_position:
+    weight: 12
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_profession:
+    weight: 10
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_related_archival_object:
+    weight: 13
+    settings:
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_terms_of_address:
     weight: 3
     settings:
       size: 60
@@ -65,9 +189,23 @@ content:
     region: content
   path:
     type: path
-    weight: 6
+    weight: 19
     region: content
     settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 18
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -77,8 +215,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  created: true
-  promote: true
-  sticky: true
-  uid: true
+  uid:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

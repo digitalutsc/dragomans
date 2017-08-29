@@ -2,10 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.event.field_agency
     - field.field.node.event.field_description
     - field.field.node.event.field_end_date_iso
     - field.field.node.event.field_end_date_text
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_notes
     - field.field.node.event.field_place
     - field.field.node.event.field_start_date_iso
     - field.field.node.event.field_start_date_text
@@ -15,15 +17,34 @@ dependencies:
       - dragomans
   module:
     - datetime
-    - ief_table_view_mode
+    - inline_entity_form
     - path
 id: node.event.default
 targetEntityType: node
 bundle: event
 mode: default
 content:
+  created:
+    type: datetime_timestamp
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_agency:
+    weight: 8
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
   field_description:
-    weight: 3
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -31,13 +52,13 @@ content:
     type: string_textarea
     region: content
   field_end_date_iso:
-    weight: 6
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_end_date_text:
-    weight: 7
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -50,27 +71,35 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_notes:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_place:
-    weight: 2
+    weight: 7
     settings:
       form_mode: default
       label_singular: ''
       label_plural: ''
-      allow_new: '1'
-      allow_existing: '1'
+      allow_new: true
+      allow_existing: true
       match_operator: CONTAINS
-      override_labels: 0
+      override_labels: false
     third_party_settings: {  }
-    type: inline_entity_form_complex_table_view_mode
+    type: inline_entity_form_complex
     region: content
   field_start_date_iso:
-    weight: 4
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_start_date_text:
-    weight: 5
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -79,9 +108,23 @@ content:
     region: content
   path:
     type: path
-    weight: 8
+    weight: 14
     region: content
     settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -91,8 +134,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  created: true
-  promote: true
-  sticky: true
-  uid: true
+  uid:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

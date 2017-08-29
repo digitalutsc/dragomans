@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.archival_object.field_archival_identifier
+    - node.type.archival_object
+  module:
+    - user
+id: node.archival_object.teaser
+targetEntityType: node
+bundle: archival_object
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_archival_identifier: true

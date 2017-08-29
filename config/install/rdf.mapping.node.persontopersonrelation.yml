@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.persontopersonrelation
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.persontopersonrelation
+targetEntityType: node
+bundle: persontopersonrelation
+types:
+  - 'schema:Thing'
+fieldMappings:
+  title:
+    properties:
+      - 'dragomans:personToPersonRelation'
+  field_role:
+    properties:
+      - 'schema:relatedTo'
+  field_person:
+    properties:
+      - 'schema:person'

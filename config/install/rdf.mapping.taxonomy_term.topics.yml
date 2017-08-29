@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.topics
+  module:
+    - taxonomy
+id: taxonomy_term.topics
+targetEntityType: taxonomy_term
+bundle: topics
+types:
+  - 'dbpedia-ow:TopicalConcept'
+fieldMappings:
+  name:
+    properties:
+      - 'dbpedia-owl:topic'
+  description:
+    properties:
+      - 'schema:description'
