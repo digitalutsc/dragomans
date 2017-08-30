@@ -3,3 +3,5 @@ type: module
 description: Dragomans
 core: 8.x
 package: Custom
+dependencies:
+  - Fields:ief_table_view_mode
