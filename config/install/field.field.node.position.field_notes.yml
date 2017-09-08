@@ -2,22 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_end_date_iso
+    - field.storage.node.field_notes
     - node.type.position
   enforced:
     module:
       - dragomans
-  module:
-    - datetime
-id: node.position.field_end_date_iso
-field_name: field_end_date_iso
+id: node.position.field_notes
+field_name: field_notes
 entity_type: node
 bundle: position
-label: 'Position End Date'
+label: Notes
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: datetime
+field_type: string_long

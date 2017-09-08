@@ -7,6 +7,9 @@ dependencies:
     - field.field.node.agency.field_notes
     - field.field.node.agency.field_place
     - node.type.agency
+  enforced:
+    module:
+      - dragomans
   module:
     - path
 id: node.agency.inline

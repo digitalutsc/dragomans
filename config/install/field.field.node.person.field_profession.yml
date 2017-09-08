@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_profession
     - node.type.person
     - taxonomy.vocabulary.professions
+  enforced:
+    module:
+      - dragomans
 id: node.person.field_profession
 field_name: field_profession
 entity_type: node

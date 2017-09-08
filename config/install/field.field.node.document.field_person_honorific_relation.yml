@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_person_honorific_relation
     - node.type.document
     - node.type.personhonorificrelation
+  enforced:
+    module:
+      - dragomans
 id: node.document.field_person_honorific_relation
 field_name: field_person_honorific_relation
 entity_type: node

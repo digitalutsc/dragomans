@@ -5,6 +5,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.language.field_description
     - node.type.language
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.language.teaser

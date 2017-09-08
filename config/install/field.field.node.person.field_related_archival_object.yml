@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_related_archival_object
     - node.type.archival_object
     - node.type.person
+  enforced:
+    module:
+      - dragomans
 id: node.person.field_related_archival_object
 field_name: field_related_archival_object
 entity_type: node

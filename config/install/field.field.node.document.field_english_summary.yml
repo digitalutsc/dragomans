@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.node.field_english_summary
     - node.type.document
+  enforced:
+    module:
+      - dragomans
 id: node.document.field_english_summary
 field_name: field_english_summary
 entity_type: node

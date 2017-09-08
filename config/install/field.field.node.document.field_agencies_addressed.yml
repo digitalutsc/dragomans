@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_agencies_addressed
     - node.type.agency
     - node.type.document
+  enforced:
+    module:
+      - dragomans
 id: node.document.field_agencies_addressed
 field_name: field_agencies_addressed
 entity_type: node

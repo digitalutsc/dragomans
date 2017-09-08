@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - node.type.persontopersonrelation
+  enforced:
+    module:
+      - dragomans
 id: node.persontopersonrelation.title
 field_name: title
 entity_type: node

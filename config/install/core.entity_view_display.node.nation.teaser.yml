@@ -5,6 +5,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.nation.field_notes
     - node.type.nation
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.nation.teaser

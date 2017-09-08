@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_p2p_role_relation
     - node.type.person
     - node.type.persontopersonrelation
+  enforced:
+    module:
+      - dragomans
 id: node.person.field_p2p_role_relation
 field_name: field_p2p_role_relation
 entity_type: node

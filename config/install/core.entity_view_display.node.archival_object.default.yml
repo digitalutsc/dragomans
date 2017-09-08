@@ -10,6 +10,9 @@ dependencies:
     - field.field.node.archival_object.field_notes
     - field.field.node.archival_object.field_page_total
     - node.type.archival_object
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.archival_object.default

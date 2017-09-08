@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - node.type.position
+  enforced:
+    module:
+      - dragomans
 id: node.position.title
 field_name: title
 entity_type: node

@@ -5,6 +5,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.archival_object.field_archival_identifier
     - node.type.archival_object
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.archival_object.teaser

@@ -5,6 +5,9 @@ dependencies:
     - field.field.node.persontopersonrelation.field_person
     - field.field.node.persontopersonrelation.field_role
     - node.type.persontopersonrelation
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.persontopersonrelation.default

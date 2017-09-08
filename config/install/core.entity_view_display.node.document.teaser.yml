@@ -17,6 +17,9 @@ dependencies:
     - field.field.node.document.field_transcription
     - field.field.node.document.field_transliteration
     - node.type.document
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.document.teaser

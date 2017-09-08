@@ -5,6 +5,9 @@ dependencies:
     - field.field.node.personhonorificrelation.field_honorific
     - field.field.node.personhonorificrelation.field_related_person
     - node.type.personhonorificrelation
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.personhonorificrelation.default

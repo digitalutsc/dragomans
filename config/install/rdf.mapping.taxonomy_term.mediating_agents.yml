@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - taxonomy.vocabulary.mediating_agents
+  enforced:
+    module:
+      - dragomans
   module:
     - taxonomy
 id: taxonomy_term.mediating_agents

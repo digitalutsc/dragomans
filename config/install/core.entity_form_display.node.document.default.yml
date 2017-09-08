@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.document.field_date_text
     - field.field.node.document.field_english_summary
     - field.field.node.document.field_genre
+    - field.field.node.document.field_language
     - field.field.node.document.field_person_honorific_relation
     - field.field.node.document.field_place
     - field.field.node.document.field_place_document_sent
@@ -17,6 +18,9 @@ dependencies:
     - field.field.node.document.field_transcription
     - field.field.node.document.field_transliteration
     - node.type.document
+  enforced:
+    module:
+      - dragomans
   module:
     - datetime
     - inline_entity_form
@@ -28,12 +32,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 16
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   field_agencies_addressed:
-    weight: 11
+    weight: 12
     settings:
       form_mode: inline
       label_singular: ''
@@ -80,8 +84,17 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
+  field_language:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_person_honorific_relation:
-    weight: 14
+    weight: 15
     settings:
       form_mode: inline
       label_singular: ''
@@ -94,7 +107,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_place:
-    weight: 7
+    weight: 8
     settings:
       form_mode: default
       label_singular: ''
@@ -107,45 +120,6 @@ content:
     type: inline_entity_form_complex
     region: content
   field_place_document_sent:
-    weight: 8
-    settings:
-      form_mode: inline
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: STARTS_WITH
-      override_labels: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex
-    region: content
-  field_related_archival_object:
-    weight: 13
-    settings:
-      form_mode: inline
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex
-    region: content
-  field_subject_agencies:
-    weight: 10
-    settings:
-      form_mode: inline
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: STARTS_WITH
-      override_labels: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex
-    region: content
-  field_subject_places:
     weight: 9
     settings:
       form_mode: inline
@@ -158,8 +132,47 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
+  field_related_archival_object:
+    weight: 14
+    settings:
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_subject_agencies:
+    weight: 11
+    settings:
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_subject_places:
+    weight: 10
+    settings:
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
   field_topics:
-    weight: 12
+    weight: 13
     settings:
       form_mode: default
       label_singular: ''
@@ -189,7 +202,7 @@ content:
     region: content
   path:
     type: path
-    weight: 19
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -197,14 +210,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 18
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 19
     region: content
     third_party_settings: {  }
   title:
@@ -217,7 +230,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 15
+    weight: 16
     settings:
       match_operator: CONTAINS
       size: 60

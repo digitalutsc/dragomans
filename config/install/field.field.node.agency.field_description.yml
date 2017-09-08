@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.node.field_description
     - node.type.agency
+  enforced:
+    module:
+      - dragomans
 id: node.agency.field_description
 field_name: field_description
 entity_type: node

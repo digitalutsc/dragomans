@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_agency
     - node.type.agency
     - node.type.event
+  enforced:
+    module:
+      - dragomans
 id: node.event.field_agency
 field_name: field_agency
 entity_type: node

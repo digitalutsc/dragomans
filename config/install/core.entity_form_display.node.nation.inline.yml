@@ -6,6 +6,9 @@ dependencies:
     - field.field.node.nation.field_description
     - field.field.node.nation.field_notes
     - node.type.nation
+  enforced:
+    module:
+      - dragomans
   module:
     - path
 id: node.nation.inline

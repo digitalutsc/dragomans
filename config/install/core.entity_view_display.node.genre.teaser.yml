@@ -6,6 +6,9 @@ dependencies:
     - field.field.node.genre.field_description
     - field.field.node.genre.field_notes
     - node.type.genre
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.genre.teaser

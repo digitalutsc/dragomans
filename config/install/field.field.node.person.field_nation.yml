@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_nation
     - node.type.nation
     - node.type.person
+  enforced:
+    module:
+      - dragomans
 id: node.person.field_nation
 field_name: field_nation
 entity_type: node

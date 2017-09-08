@@ -6,12 +6,13 @@ dependencies:
       - dragomans
   module:
     - node
-id: node.field_nation
-field_name: field_nation
+    - taxonomy
+id: node.field_mediating_agent
+field_name: field_mediating_agent
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: -1

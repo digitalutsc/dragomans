@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.field.node.honorific.field_notes
     - node.type.honorific
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.honorific.default

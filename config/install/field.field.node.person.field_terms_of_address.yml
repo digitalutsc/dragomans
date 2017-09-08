@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.node.field_terms_of_address
     - node.type.person
+  enforced:
+    module:
+      - dragomans
 id: node.person.field_terms_of_address
 field_name: field_terms_of_address
 entity_type: node

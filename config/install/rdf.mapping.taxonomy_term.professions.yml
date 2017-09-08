@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - taxonomy.vocabulary.professions
+  enforced:
+    module:
+      - dragomans
   module:
     - taxonomy
 id: taxonomy_term.professions

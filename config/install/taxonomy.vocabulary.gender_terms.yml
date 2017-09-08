@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - dragomans
 name: 'Gender Terms'
 vid: gender_terms
 description: 'Gender Terms'

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.document.field_date_text
     - field.field.node.document.field_english_summary
     - field.field.node.document.field_genre
+    - field.field.node.document.field_language
     - field.field.node.document.field_person_honorific_relation
     - field.field.node.document.field_place
     - field.field.node.document.field_place_document_sent
@@ -17,6 +18,9 @@ dependencies:
     - field.field.node.document.field_transcription
     - field.field.node.document.field_transliteration
     - node.type.document
+  enforced:
+    module:
+      - dragomans
   module:
     - datetime
     - user
@@ -59,6 +63,14 @@ content:
     region: content
   field_genre:
     weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_language:
+    weight: 15
     label: above
     settings:
       link: true

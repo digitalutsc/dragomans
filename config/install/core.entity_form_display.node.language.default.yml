@@ -5,6 +5,9 @@ dependencies:
     - field.field.node.language.field_description
     - field.field.node.language.field_notes
     - node.type.language
+  enforced:
+    module:
+      - dragomans
   module:
     - path
 id: node.language.default

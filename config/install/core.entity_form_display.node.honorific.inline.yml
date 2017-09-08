@@ -5,6 +5,9 @@ dependencies:
     - core.entity_form_mode.node.inline
     - field.field.node.honorific.field_notes
     - node.type.honorific
+  enforced:
+    module:
+      - dragomans
 id: node.honorific.inline
 targetEntityType: node
 bundle: honorific

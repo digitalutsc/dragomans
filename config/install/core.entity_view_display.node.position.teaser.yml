@@ -8,6 +8,9 @@ dependencies:
     - field.field.node.position.field_start_date_iso
     - field.field.node.position.field_start_date_text
     - node.type.position
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.position.teaser

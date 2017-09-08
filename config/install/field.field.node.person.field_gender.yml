@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_gender
     - node.type.person
     - taxonomy.vocabulary.gender_terms
+  enforced:
+    module:
+      - dragomans
 id: node.person.field_gender
 field_name: field_gender
 entity_type: node

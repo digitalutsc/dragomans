@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_archival_identifier
     - node.type.archival_object
     - taxonomy.vocabulary.archival_identifiers
+  enforced:
+    module:
+      - dragomans
 id: node.archival_object.field_archival_identifier
 field_name: field_archival_identifier
 entity_type: node

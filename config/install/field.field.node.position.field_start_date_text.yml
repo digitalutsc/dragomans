@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.node.field_start_date_text
     - node.type.position
+  enforced:
+    module:
+      - dragomans
 id: node.position.field_start_date_text
 field_name: field_start_date_text
 entity_type: node

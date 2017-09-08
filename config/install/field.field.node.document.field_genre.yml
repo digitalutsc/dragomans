@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_genre
     - node.type.document
     - node.type.genre
+  enforced:
+    module:
+      - dragomans
 id: node.document.field_genre
 field_name: field_genre
 entity_type: node

@@ -5,6 +5,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.honorific.field_notes
     - node.type.honorific
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.honorific.teaser

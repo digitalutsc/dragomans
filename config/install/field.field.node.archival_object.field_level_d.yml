@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.node.field_level_d
     - node.type.archival_object
+  enforced:
+    module:
+      - dragomans
 id: node.archival_object.field_level_d
 field_name: field_level_d
 entity_type: node

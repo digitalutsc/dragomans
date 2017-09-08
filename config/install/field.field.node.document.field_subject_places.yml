@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_subject_places
     - node.type.document
     - node.type.place
+  enforced:
+    module:
+      - dragomans
 id: node.document.field_subject_places
 field_name: field_subject_places
 entity_type: node

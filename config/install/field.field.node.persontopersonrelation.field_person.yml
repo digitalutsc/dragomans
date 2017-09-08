@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_person
     - node.type.person
     - node.type.persontopersonrelation
+  enforced:
+    module:
+      - dragomans
 id: node.persontopersonrelation.field_person
 field_name: field_person
 entity_type: node

@@ -6,6 +6,9 @@ dependencies:
     - field.field.node.role.field_description
     - field.field.node.role.field_notes
     - node.type.role
+  enforced:
+    module:
+      - dragomans
   module:
     - user
 id: node.role.teaser

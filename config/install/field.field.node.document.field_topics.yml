@@ -5,6 +5,9 @@ dependencies:
     - field.storage.node.field_topics
     - node.type.document
     - taxonomy.vocabulary.topics
+  enforced:
+    module:
+      - dragomans
 id: node.document.field_topics
 field_name: field_topics
 entity_type: node
