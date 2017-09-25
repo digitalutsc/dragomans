@@ -3,19 +3,19 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_date_text
-    - node.type.document
+    - node.type.archival_object
     - node.type.textual_date
   enforced:
     module:
       - dragomans
-id: node.document.field_date_text
+id: node.archival_object.field_date_text
 field_name: field_date_text
 entity_type: node
-bundle: document
+bundle: archival_object
 label: 'Production Date (text)'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

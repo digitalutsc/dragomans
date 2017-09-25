@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.document.field_date
     - field.field.node.document.field_english_summary
     - field.field.node.document.field_genre
+    - field.field.node.document.field_language
     - field.field.node.document.field_person_honorific_relation
     - field.field.node.document.field_place
     - field.field.node.document.field_place_document_sent
@@ -35,6 +36,7 @@ hidden:
   field_date: true
   field_english_summary: true
   field_genre: true
+  field_language: true
   field_person_honorific_relation: true
   field_place: true
   field_place_document_sent: true

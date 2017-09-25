@@ -22,7 +22,7 @@ bundle: position
 mode: inline
 content:
   field_agency:
-    weight: 5
+    weight: 6
     settings:
       form_mode: default
       label_singular: ''
@@ -50,7 +50,7 @@ content:
     region: content
   field_notes:
     type: string_textarea
-    weight: 6
+    weight: 7
     region: content
     settings:
       rows: 5

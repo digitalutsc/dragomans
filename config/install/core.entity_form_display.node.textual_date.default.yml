@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.textual_date.field_date_type
+    - node.type.textual_date
+  enforced:
+    module:
+      - dragomans
+id: node.textual_date.default
+targetEntityType: node
+bundle: textual_date
+mode: default
+content:
+  field_date_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_agency
+    - field.field.node.event.field_date_type
     - field.field.node.event.field_description
     - field.field.node.event.field_end_date_iso
     - field.field.node.event.field_end_date_text
@@ -26,12 +27,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_agency:
-    weight: 8
+    weight: 9
     settings:
       form_mode: default
       label_singular: ''
@@ -43,8 +44,14 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
+  field_date_type:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_description:
-    weight: 2
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
@@ -52,7 +59,7 @@ content:
     type: string_textarea
     region: content
   field_end_date_iso:
-    weight: 5
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
@@ -66,13 +73,16 @@ content:
     type: string_textfield
     region: content
   field_event_type:
-    weight: 1
-    settings: {  }
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
     region: content
   field_notes:
-    weight: 9
+    weight: 10
     settings:
       rows: 5
       placeholder: ''
@@ -80,7 +90,7 @@ content:
     type: string_textarea
     region: content
   field_place:
-    weight: 7
+    weight: 8
     settings:
       form_mode: default
       label_singular: ''
@@ -99,7 +109,7 @@ content:
     type: datetime_default
     region: content
   field_start_date_text:
-    weight: 4
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -108,20 +118,20 @@ content:
     region: content
   path:
     type: path
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 12
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 13
+    weight: 14
     region: content
     settings:
       display_label: true
@@ -136,7 +146,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 10
+    weight: 11
     region: content
     settings:
       match_operator: CONTAINS

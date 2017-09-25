@@ -23,6 +23,7 @@ dependencies:
       - dragomans
   module:
     - datetime
+    - ief_table_view_mode
     - inline_entity_form
     - path
 id: node.document.default
@@ -58,10 +59,15 @@ content:
   field_date_text:
     weight: 5
     settings:
-      size: 60
-      placeholder: ''
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
     third_party_settings: {  }
-    type: string_textfield
+    type: inline_entity_form_complex_table_view_mode
     region: content
   field_english_summary:
     weight: 1

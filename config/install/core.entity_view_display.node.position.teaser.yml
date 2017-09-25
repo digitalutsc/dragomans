@@ -3,8 +3,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.position.field_agency
     - field.field.node.position.field_end_date_iso
     - field.field.node.position.field_end_date_text
+    - field.field.node.position.field_notes
     - field.field.node.position.field_start_date_iso
     - field.field.node.position.field_start_date_text
     - node.type.position
@@ -22,7 +24,9 @@ content:
     weight: 100
     region: content
 hidden:
+  field_agency: true
   field_end_date_iso: true
   field_end_date_text: true
+  field_notes: true
   field_start_date_iso: true
   field_start_date_text: true

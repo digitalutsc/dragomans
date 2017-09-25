@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_type
+    - node.type.event
+  enforced:
+    module:
+      - dragomans
+  module:
+    - options
+id: node.event.field_date_type
+field_name: field_date_type
+entity_type: node
+bundle: event
+label: 'Date Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
