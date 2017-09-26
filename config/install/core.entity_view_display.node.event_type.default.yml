@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event_type.field_description
+    - field.field.node.event_type.field_notes
+    - node.type.event_type
+  enforced:
+    module:
+      - dragomans
+  module:
+    - user
+id: node.event_type.default
+targetEntityType: node
+bundle: event_type
+mode: default
+content:
+  field_description:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_notes:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

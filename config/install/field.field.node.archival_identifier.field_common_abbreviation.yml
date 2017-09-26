@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_common_abbreviation
+    - node.type.archival_identifier
+  enforced:
+    module:
+      - dragomans
+id: node.archival_identifier.field_common_abbreviation
+field_name: field_common_abbreviation
+entity_type: node
+bundle: archival_identifier
+label: 'Common Abbreviation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

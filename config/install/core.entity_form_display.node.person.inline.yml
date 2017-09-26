@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.person.field_alternate_terms_of_address
     - field.field.node.person.field_event
     - field.field.node.person.field_family_name
-    - field.field.node.person.field_gender
     - field.field.node.person.field_given_name
     - field.field.node.person.field_language
     - field.field.node.person.field_nation
@@ -23,7 +22,6 @@ dependencies:
       - dragomans
   module:
     - inline_entity_form
-    - path
 id: node.person.inline
 targetEntityType: node
 bundle: person
@@ -73,19 +71,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_gender:
-    weight: 7
-    settings:
-      match_operator: CONTAINS
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex
     region: content
   field_given_name:
     weight: 1
@@ -147,19 +132,6 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
-  field_profession:
-    weight: 10
-    settings:
-      match_operator: CONTAINS
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex
-    region: content
   field_related_archival_object:
     weight: 13
     settings:
@@ -181,12 +153,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  path:
-    type: path
-    weight: 15
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0
@@ -197,6 +163,8 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_profession: true
+  path: true
   promote: true
   sticky: true
   uid: true

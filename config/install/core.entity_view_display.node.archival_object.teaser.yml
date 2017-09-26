@@ -3,7 +3,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.archival_object.field_archival_identifier
+    - field.field.node.archival_object.field_date
+    - field.field.node.archival_object.field_date_text
     - field.field.node.archival_object.field_level_a
     - field.field.node.archival_object.field_level_b
     - field.field.node.archival_object.field_level_c
@@ -25,7 +26,8 @@ content:
     weight: 100
     region: content
 hidden:
-  field_archival_identifier: true
+  field_date: true
+  field_date_text: true
   field_level_a: true
   field_level_b: true
   field_level_c: true

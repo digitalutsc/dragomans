@@ -2,21 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.languages
+    - node.type.event_type
   enforced:
     module:
       - dragomans
   module:
-    - taxonomy
-id: taxonomy_term.languages
-targetEntityType: taxonomy_term
-bundle: languages
+    - node
+id: node.event_type
+targetEntityType: node
+bundle: event_type
 types:
   - 'schema:Thing'
 fieldMappings:
-  name:
+  title:
     properties:
       - 'schema:name'
-  description:
+  field_description:
     properties:
       - 'schema:description'
+  field_notes:
+    properties:
+      - 'dbpedia-owl:notes'

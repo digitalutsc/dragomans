@@ -2,21 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.topics
+    - node.type.topic
   enforced:
     module:
       - dragomans
   module:
-    - taxonomy
-id: taxonomy_term.topics
-targetEntityType: taxonomy_term
-bundle: topics
+    - node
+id: node.topic
+targetEntityType: node
+bundle: topic
 types:
   - 'dbpedia-ow:TopicalConcept'
 fieldMappings:
-  name:
+  title:
     properties:
       - 'dbpedia-owl:topic'
-  description:
+  field_description:
     properties:
       - 'schema:description'
+  field_notes:
+    properties:
+      - 'dbpedia-owl:notes'

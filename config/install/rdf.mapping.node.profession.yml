@@ -2,21 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.professions
+    - node.type.profession
   enforced:
     module:
       - dragomans
   module:
-    - taxonomy
-id: taxonomy_term.professions
-targetEntityType: taxonomy_term
-bundle: professions
+    - node
+id: node.profession
+targetEntityType: node
+bundle: profession
 types:
   - 'schema:ProfessionalService'
 fieldMappings:
-  name:
+  title:
     properties:
       - 'dbpedia-owl:profession'
-  description:
+  field_description:
     properties:
       - 'schema:description'
+  field_notes:
+    properties:
+      - 'dbpedia-owl:notes'

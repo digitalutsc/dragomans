@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.archival_identifier.field_common_abbreviation
+    - field.field.node.archival_identifier.field_description
+    - field.field.node.archival_identifier.field_name_in_local_language
+    - field.field.node.archival_identifier.field_notes
+    - node.type.archival_identifier
+  enforced:
+    module:
+      - dragomans
+  module:
+    - user
+id: node.archival_identifier.teaser
+targetEntityType: node
+bundle: archival_identifier
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_common_abbreviation: true
+  field_description: true
+  field_name_in_local_language: true
+  field_notes: true

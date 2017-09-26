@@ -4,10 +4,10 @@ dependencies:
   config:
     - core.entity_form_mode.node.inline
     - field.field.node.event.field_agency
+    - field.field.node.event.field_date_type
     - field.field.node.event.field_description
     - field.field.node.event.field_end_date_iso
     - field.field.node.event.field_end_date_text
-    - field.field.node.event.field_event_type
     - field.field.node.event.field_notes
     - field.field.node.event.field_place
     - field.field.node.event.field_start_date_iso
@@ -54,15 +54,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_event_type:
-    type: entity_reference_autocomplete
-    weight: 2
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_notes:
     type: string_textarea
     weight: 10
@@ -104,6 +95,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_date_type: true
   path: true
   promote: true
   sticky: true

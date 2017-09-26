@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.node.inline
     - field.field.node.archival_object.field_archival_identifier
     - field.field.node.archival_object.field_date
     - field.field.node.archival_object.field_date_text
@@ -18,6 +19,7 @@ dependencies:
   module:
     - datetime
     - ief_table_view_mode
+    - inline_entity_form
     - path
 id: node.archival_object.default
 targetEntityType: node
@@ -33,11 +35,15 @@ content:
   field_archival_identifier:
     weight: 1
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: inline_entity_form_complex
     region: content
   field_date:
     weight: 2

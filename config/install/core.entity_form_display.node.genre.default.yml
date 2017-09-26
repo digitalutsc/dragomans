@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.node.inline
     - field.field.node.genre.field_description
     - field.field.node.genre.field_mediating_agent
     - field.field.node.genre.field_notes
@@ -10,6 +11,7 @@ dependencies:
     module:
       - dragomans
   module:
+    - inline_entity_form
     - path
 id: node.genre.default
 targetEntityType: node
@@ -33,11 +35,15 @@ content:
   field_mediating_agent:
     weight: 2
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: inline_entity_form_complex
     region: content
   field_notes:
     weight: 3

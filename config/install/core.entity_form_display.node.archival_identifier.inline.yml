@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.inline
+    - field.field.node.archival_identifier.field_common_abbreviation
+    - field.field.node.archival_identifier.field_description
+    - field.field.node.archival_identifier.field_name_in_local_language
+    - field.field.node.archival_identifier.field_notes
+    - node.type.archival_identifier
+  enforced:
+    module:
+      - dragomans
+id: node.archival_identifier.inline
+targetEntityType: node
+bundle: archival_identifier
+mode: inline
+content:
+  field_common_abbreviation:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_name_in_local_language:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_notes:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

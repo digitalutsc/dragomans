@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_profession
     - node.type.person
-    - taxonomy.vocabulary.professions
+    - node.type.profession
   enforced:
     module:
       - dragomans
@@ -19,10 +19,10 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      professions: professions
+      profession: profession
     sort:
       field: _none
     auto_create: false

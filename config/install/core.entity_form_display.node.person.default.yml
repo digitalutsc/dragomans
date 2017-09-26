@@ -60,7 +60,7 @@ content:
     type: string_textfield
     region: content
   field_event:
-    weight: 11
+    weight: 10
     settings:
       form_mode: inline
       label_singular: ''
@@ -82,16 +82,9 @@ content:
     region: content
   field_gender:
     weight: 7
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: STARTS_WITH
-      override_labels: false
+    settings: {  }
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: options_select
     region: content
   field_given_name:
     weight: 1
@@ -141,7 +134,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_position:
-    weight: 12
+    weight: 11
     settings:
       form_mode: default
       label_singular: ''
@@ -154,9 +147,9 @@ content:
     type: inline_entity_form_complex
     region: content
   field_profession:
-    weight: 10
+    weight: 12
     settings:
-      form_mode: default
+      form_mode: inline
       label_singular: ''
       label_plural: ''
       allow_new: true

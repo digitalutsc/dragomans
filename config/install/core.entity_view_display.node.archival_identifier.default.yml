@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.archival_identifier.field_common_abbreviation
+    - field.field.node.archival_identifier.field_description
+    - field.field.node.archival_identifier.field_name_in_local_language
+    - field.field.node.archival_identifier.field_notes
+    - node.type.archival_identifier
+  enforced:
+    module:
+      - dragomans
+  module:
+    - user
+id: node.archival_identifier.default
+targetEntityType: node
+bundle: archival_identifier
+mode: default
+content:
+  field_common_abbreviation:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_description:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_name_in_local_language:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_notes:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

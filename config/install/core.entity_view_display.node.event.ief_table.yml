@@ -4,10 +4,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.ief_table
     - field.field.node.event.field_agency
+    - field.field.node.event.field_date_type
     - field.field.node.event.field_description
     - field.field.node.event.field_end_date_iso
     - field.field.node.event.field_end_date_text
-    - field.field.node.event.field_event_type
     - field.field.node.event.field_notes
     - field.field.node.event.field_place
     - field.field.node.event.field_start_date_iso
@@ -32,9 +32,9 @@ content:
     third_party_settings: {  }
 hidden:
   field_agency: true
+  field_date_type: true
   field_end_date_iso: true
   field_end_date_text: true
-  field_event_type: true
   field_notes: true
   field_place: true
   field_start_date_iso: true

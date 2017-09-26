@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.profession.field_description
+    - field.field.node.profession.field_notes
+    - node.type.profession
+  enforced:
+    module:
+      - dragomans
+  module:
+    - user
+id: node.profession.teaser
+targetEntityType: node
+bundle: profession
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_notes: true

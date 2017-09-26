@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.archival_identifier
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.archival_identifier
+targetEntityType: node
+bundle: archival_identifier
+types:
+  - 'schema:CreativeWork'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:identifier'
+  field_description:
+    properties:
+      - 'schema:description'
+  field_notes:
+    properties:
+      - 'dbpedia-owl:notes'

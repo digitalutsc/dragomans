@@ -6,14 +6,24 @@ dependencies:
       - dragomans
   module:
     - node
-    - taxonomy
+    - options
 id: node.field_gender
 field_name: field_gender
 entity_type: node
-type: entity_reference
+type: list_string
 settings:
-  target_type: taxonomy_term
-module: core
+  allowed_values:
+    -
+      value: Male
+      label: Male
+    -
+      value: Female
+      label: Female
+    -
+      value: Unknown
+      label: Unknown
+  allowed_values_function: ''
+module: options
 locked: false
 cardinality: 1
 translatable: true

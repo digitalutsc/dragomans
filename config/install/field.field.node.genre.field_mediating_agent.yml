@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_mediating_agent
     - node.type.genre
+    - node.type.mediating_agent
   enforced:
     module:
       - dragomans
@@ -18,6 +19,12 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
-  handler_settings: {  }
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      mediating_agent: mediating_agent
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

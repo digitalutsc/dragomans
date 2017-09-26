@@ -3,7 +3,8 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.inline
-    - field.field.node.archival_object.field_archival_identifier
+    - field.field.node.archival_object.field_date
+    - field.field.node.archival_object.field_date_text
     - field.field.node.archival_object.field_level_a
     - field.field.node.archival_object.field_level_b
     - field.field.node.archival_object.field_level_c
@@ -21,15 +22,6 @@ targetEntityType: node
 bundle: archival_object
 mode: inline
 content:
-  field_archival_identifier:
-    weight: 1
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_level_a:
     weight: 2
     settings:
@@ -93,6 +85,8 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_date: true
+  field_date_text: true
   promote: true
   sticky: true
   uid: true
