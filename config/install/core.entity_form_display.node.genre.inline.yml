@@ -3,8 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.inline
-    - field.field.node.genre.field_description
-    - field.field.node.genre.field_mediating_agent
     - field.field.node.genre.field_notes
     - node.type.genre
   enforced:
@@ -15,23 +13,6 @@ targetEntityType: node
 bundle: genre
 mode: inline
 content:
-  field_description:
-    weight: 2
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_mediating_agent:
-    type: entity_reference_autocomplete
-    weight: 1
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_notes:
     weight: 3
     settings:

@@ -10,7 +10,7 @@ id: node.genre.title
 field_name: title
 entity_type: node
 bundle: genre
-label: Genre
+label: 'Genre Name'
 description: ''
 required: true
 translatable: true

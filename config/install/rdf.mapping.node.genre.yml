@@ -17,9 +17,6 @@ fieldMappings:
   title:
     properties:
       - 'schema:genre'
-  field_place_description:
-    properties:
-      - 'schema:description'
   field_notes:
     properties:
       - 'dbpedia-owl:notes'
