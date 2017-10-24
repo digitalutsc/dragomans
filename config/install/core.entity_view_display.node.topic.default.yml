@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.topic.field_description
     - field.field.node.topic.field_notes
     - node.type.topic
   enforced:
@@ -15,13 +14,6 @@ targetEntityType: node
 bundle: topic
 mode: default
 content:
-  field_description:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
   field_notes:
     weight: 2
     label: above

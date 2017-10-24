@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.inline
-    - field.field.node.topic.field_description
     - field.field.node.topic.field_notes
     - node.type.topic
   enforced:
@@ -14,14 +13,6 @@ targetEntityType: node
 bundle: topic
 mode: inline
 content:
-  field_description:
-    weight: 1
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_notes:
     weight: 2
     settings:
