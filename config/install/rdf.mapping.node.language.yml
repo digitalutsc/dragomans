@@ -17,9 +17,6 @@ fieldMappings:
   title:
     properties:
       - 'schema:language'
-  field_description:
-    properties:
-      - 'schema:description'
   field_notes:
     properties:
       - 'dbpedia-owl:notes'

@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.language.field_description
+    - field.field.node.language.field_notes
     - node.type.language
   enforced:
     module:
@@ -19,4 +19,4 @@ content:
     weight: 100
     region: content
 hidden:
-  field_description: true
+  field_notes: true

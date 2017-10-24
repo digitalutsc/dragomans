@@ -10,7 +10,7 @@ id: node.nation.title
 field_name: title
 entity_type: node
 bundle: nation
-label: Nation
+label: 'Nation Name'
 description: ''
 required: true
 translatable: true

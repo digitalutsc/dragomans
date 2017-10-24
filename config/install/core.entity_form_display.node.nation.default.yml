@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.nation.field_description
     - field.field.node.nation.field_notes
     - node.type.nation
   enforced:
@@ -15,14 +14,6 @@ targetEntityType: node
 bundle: nation
 mode: default
 content:
-  field_description:
-    weight: 1
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_notes:
     weight: 2
     settings:

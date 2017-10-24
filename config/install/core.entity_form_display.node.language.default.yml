@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.language.field_description
     - field.field.node.language.field_notes
     - node.type.language
   enforced:
@@ -21,14 +20,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_description:
-    weight: 1
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_notes:
     weight: 2
     settings:

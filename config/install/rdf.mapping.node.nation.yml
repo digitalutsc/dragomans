@@ -17,9 +17,6 @@ fieldMappings:
   title:
     properties:
       - 'dbpedia-owl:nation'
-  field_description:
-    properties:
-      - 'schema:description'
   field_notes:
     properties:
       - 'dbpedia-owl:notes'
