@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.event_type.field_description
     - field.field.node.event_type.field_notes
     - node.type.event_type
   enforced:
@@ -20,5 +19,4 @@ content:
     weight: 100
     region: content
 hidden:
-  field_description: true
   field_notes: true
