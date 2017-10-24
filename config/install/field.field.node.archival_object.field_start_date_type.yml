@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_date_type
+    - node.type.archival_object
+  enforced:
+    module:
+      - dragomans
+  module:
+    - options
+id: node.archival_object.field_start_date_type
+field_name: field_start_date_type
+entity_type: node
+bundle: archival_object
+label: 'Start Date Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

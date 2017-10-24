@@ -1,13 +1,13 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   enforced:
     module:
       - dragomans
-  module:
-    - node
-id: node.field_level_c
-field_name: field_level_c
+id: node.field_archival_path
+field_name: field_archival_path
 entity_type: node
 type: string
 settings:

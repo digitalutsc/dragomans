@@ -17,9 +17,6 @@ fieldMappings:
   title:
     properties:
       - 'schema:organization'
-  field_description:
-    properties:
-      - 'schema:description'
   field_place:
     properties:
       - 'schema:place'

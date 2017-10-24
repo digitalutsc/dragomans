@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.inline
-    - field.field.node.agency.field_description
     - field.field.node.agency.field_notes
     - field.field.node.agency.field_place
     - node.type.agency
@@ -11,20 +10,13 @@ dependencies:
     module:
       - dragomans
   module:
+    - inline_entity_form
     - path
 id: node.agency.inline
 targetEntityType: node
 bundle: agency
 mode: inline
 content:
-  field_description:
-    type: string_textarea
-    weight: 1
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
   field_notes:
     weight: 3
     settings:
@@ -36,11 +28,15 @@ content:
   field_place:
     weight: 2
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      override_labels: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: inline_entity_form_complex
     region: content
   path:
     type: path

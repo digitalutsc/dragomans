@@ -4,36 +4,31 @@ dependencies:
   config:
     - core.entity_form_mode.node.inline
     - field.field.node.archival_object.field_archival_identifier
+    - field.field.node.archival_object.field_archival_path
     - field.field.node.archival_object.field_date
     - field.field.node.archival_object.field_date_text
-    - field.field.node.archival_object.field_level_a
-    - field.field.node.archival_object.field_level_b
-    - field.field.node.archival_object.field_level_c
-    - field.field.node.archival_object.field_level_d
+    - field.field.node.archival_object.field_end_date_iso
+    - field.field.node.archival_object.field_end_date_text
+    - field.field.node.archival_object.field_end_date_type
     - field.field.node.archival_object.field_notes
     - field.field.node.archival_object.field_page_total
+    - field.field.node.archival_object.field_start_date_iso
+    - field.field.node.archival_object.field_start_date_text
+    - field.field.node.archival_object.field_start_date_type
     - node.type.archival_object
   enforced:
     module:
       - dragomans
   module:
     - datetime
-    - ief_table_view_mode
     - inline_entity_form
-    - path
 id: node.archival_object.default
 targetEntityType: node
 bundle: archival_object
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 11
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_archival_identifier:
-    weight: 1
+    weight: 2
     settings:
       form_mode: inline
       label_singular: ''
@@ -45,50 +40,21 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
-  field_date:
-    weight: 2
+  field_archival_path:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_end_date_iso:
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_date_text:
-    weight: 3
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: '1'
-      allow_existing: '1'
-      match_operator: STARTS_WITH
-      override_labels: 0
-    third_party_settings: {  }
-    type: inline_entity_form_complex_table_view_mode
-    region: content
-  field_level_a:
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_level_b:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_level_c:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_level_d:
+  field_end_date_text:
     weight: 7
     settings:
       size: 60
@@ -96,8 +62,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_notes:
+  field_end_date_type:
     weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_notes:
+    weight: 10
     settings:
       rows: 5
       placeholder: ''
@@ -111,26 +83,26 @@ content:
     third_party_settings: {  }
     type: number
     region: content
-  path:
-    type: path
-    weight: 14
-    region: content
+  field_start_date_iso:
+    weight: 3
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 12
+    type: datetime_default
     region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
+  field_start_date_text:
+    weight: 4
     settings:
-      display_label: true
-    weight: 13
-    region: content
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_start_date_type:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -139,13 +111,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 10
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    region: content
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  created: true
+  field_date: true
+  field_date_text: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

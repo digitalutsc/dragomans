@@ -2,20 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_level_a
+    - field.storage.node.field_end_date_iso
     - node.type.archival_object
   enforced:
     module:
       - dragomans
-id: node.archival_object.field_level_a
-field_name: field_level_a
+  module:
+    - datetime
+id: node.archival_object.field_end_date_iso
+field_name: field_end_date_iso
 entity_type: node
 bundle: archival_object
-label: 'Level A'
+label: 'End Date'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: datetime

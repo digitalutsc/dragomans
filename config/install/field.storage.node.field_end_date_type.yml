@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+  enforced:
+    module:
+      - dragomans
+id: node.field_end_date_type
+field_name: field_end_date_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Gregorian
+      label: Gregorian
+    -
+      value: Hijri
+      label: Hijri
+    -
+      value: Venetian
+      label: Venetian
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
