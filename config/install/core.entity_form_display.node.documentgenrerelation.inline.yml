@@ -3,24 +3,25 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.inline
-    - field.field.node.mediating_agent.field_description
-    - field.field.node.mediating_agent.field_notes
-    - node.type.mediating_agent
+    - field.field.node.documentgenrerelation.field_genre
+    - field.field.node.documentgenrerelation.field_notes
+    - node.type.documentgenrerelation
   enforced:
     module:
       - dragomans
-id: node.mediating_agent.inline
+id: node.documentgenrerelation.inline
 targetEntityType: node
-bundle: mediating_agent
+bundle: documentgenrerelation
 mode: inline
 content:
-  field_description:
+  field_genre:
     weight: 1
     settings:
-      rows: 5
+      match_operator: CONTAINS
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: entity_reference_autocomplete
     region: content
   field_notes:
     weight: 2

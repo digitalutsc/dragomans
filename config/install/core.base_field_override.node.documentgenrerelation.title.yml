@@ -2,20 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_notes
-    - node.type.mediating_agent
+    - node.type.documentgenrerelation
   enforced:
     module:
       - dragomans
-id: node.mediating_agent.field_notes
-field_name: field_notes
+id: node.documentgenrerelation.title
+field_name: title
 entity_type: node
-bundle: mediating_agent
-label: Notes
+bundle: documentgenrerelation
+label: 'Document-Genre-Relation Title'
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string_long
+field_type: string

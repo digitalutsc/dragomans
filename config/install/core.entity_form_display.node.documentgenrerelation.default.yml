@@ -2,35 +2,36 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.mediating_agent.field_description
-    - field.field.node.mediating_agent.field_notes
-    - node.type.mediating_agent
+    - field.field.node.documentgenrerelation.field_genre
+    - field.field.node.documentgenrerelation.field_notes
+    - node.type.documentgenrerelation
   enforced:
     module:
       - dragomans
   module:
     - path
-id: node.mediating_agent.default
+id: node.documentgenrerelation.default
 targetEntityType: node
-bundle: mediating_agent
+bundle: documentgenrerelation
 mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_description:
-    weight: 1
+  field_genre:
+    weight: 31
     settings:
-      rows: 5
+      match_operator: CONTAINS
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: entity_reference_autocomplete
     region: content
   field_notes:
-    weight: 2
+    weight: 32
     settings:
       rows: 5
       placeholder: ''
@@ -39,7 +40,7 @@ content:
     region: content
   path:
     type: path
-    weight: 7
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -47,19 +48,19 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 15
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 16
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -67,7 +68,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60

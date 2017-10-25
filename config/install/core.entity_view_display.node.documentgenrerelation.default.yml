@@ -2,28 +2,29 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.mediating_agent.field_description
-    - field.field.node.mediating_agent.field_notes
-    - node.type.mediating_agent
+    - field.field.node.documentgenrerelation.field_genre
+    - field.field.node.documentgenrerelation.field_notes
+    - node.type.documentgenrerelation
   enforced:
     module:
       - dragomans
   module:
     - user
-id: node.mediating_agent.default
+id: node.documentgenrerelation.default
 targetEntityType: node
-bundle: mediating_agent
+bundle: documentgenrerelation
 mode: default
 content:
-  field_description:
-    weight: 102
+  field_genre:
+    weight: 101
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    type: basic_string
+    type: entity_reference_label
     region: content
   field_notes:
-    weight: 103
+    weight: 102
     label: above
     settings: {  }
     third_party_settings: {  }
