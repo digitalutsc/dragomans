@@ -2,19 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_name_part_terms_of_address
     - node.type.person
   enforced:
     module:
       - dragomans
-id: node.person.field_name_part_terms_of_address
-field_name: field_name_part_terms_of_address
+id: node.person.title
+field_name: title
 entity_type: node
 bundle: person
-label: 'Name Part/Terms of Address'
+label: 'Person Name'
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

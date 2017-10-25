@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_terms_of_address
+    - field.storage.node.field_alternate_namepart
     - node.type.person
   enforced:
     module:
       - dragomans
-id: node.person.field_terms_of_address
-field_name: field_terms_of_address
+id: node.person.field_alternate_namepart
+field_name: field_alternate_namepart
 entity_type: node
 bundle: person
-label: 'Name Part/Terms of Address'
+label: 'Alternate Namepart'
 description: ''
 required: false
 translatable: false

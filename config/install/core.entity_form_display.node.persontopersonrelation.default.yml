@@ -1,4 +1,3 @@
-uuid: 437eb45f-33a8-4c99-ad9e-3129f36c4a48
 langcode: en
 status: true
 dependencies:
@@ -39,16 +38,9 @@ content:
     region: content
   field_role:
     weight: 2
-    settings:
-      form_mode: inline
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: STARTS_WITH
-      override_labels: false
+    settings: {  }
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: options_select
     region: content
   path:
     type: path
@@ -88,4 +80,3 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden: {  }
-

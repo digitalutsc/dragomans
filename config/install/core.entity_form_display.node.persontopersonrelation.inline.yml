@@ -1,4 +1,3 @@
-uuid: 658713b2-13aa-442f-a907-2ea41594f117
 langcode: en
 status: true
 dependencies:
@@ -10,8 +9,6 @@ dependencies:
   enforced:
     module:
       - dragomans
-  module:
-    - inline_entity_form
 id: node.persontopersonrelation.inline
 targetEntityType: node
 bundle: persontopersonrelation
@@ -19,29 +16,15 @@ mode: inline
 content:
   field_person:
     weight: 1
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: STARTS_WITH
-      override_labels: false
+    settings: {  }
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: options_select
     region: content
   field_role:
     weight: 2
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: STARTS_WITH
-      override_labels: false
+    settings: {  }
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: options_select
     region: content
   title:
     type: string_textfield

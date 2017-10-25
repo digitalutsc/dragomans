@@ -5,18 +5,17 @@ dependencies:
     - core.entity_form_mode.node.inline
     - field.field.node.person.field_alternate_family_name
     - field.field.node.person.field_alternate_given_name
-    - field.field.node.person.field_alternate_terms_of_address
+    - field.field.node.person.field_alternate_namepart
+    - field.field.node.person.field_associated_position
     - field.field.node.person.field_event
     - field.field.node.person.field_family_name
     - field.field.node.person.field_gender
     - field.field.node.person.field_given_name
     - field.field.node.person.field_language
-    - field.field.node.person.field_name_part_terms_of_address
+    - field.field.node.person.field_namepart
     - field.field.node.person.field_nation
     - field.field.node.person.field_p2p_role_relation
     - field.field.node.person.field_profession
-    - field.field.node.person.field_related_archival_object
-    - field.field.node.person.field_terms_of_address
     - node.type.person
   enforced:
     module:
@@ -44,16 +43,25 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_alternate_terms_of_address:
+  field_alternate_namepart:
+    type: string_textfield
     weight: 6
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_event:
+  field_associated_position:
+    type: entity_reference_autocomplete
     weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_event:
+    weight: 12
     settings:
       form_mode: inline
       label_singular: ''
@@ -73,6 +81,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_gender:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_given_name:
     weight: 1
     settings:
@@ -94,6 +108,14 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
+  field_namepart:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_nation:
     weight: 9
     settings:
@@ -108,19 +130,6 @@ content:
     type: inline_entity_form_complex
     region: content
   field_p2p_role_relation:
-    weight: 14
-    settings:
-      match_operator: CONTAINS
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex
-    region: content
-  field_related_archival_object:
     weight: 13
     settings:
       match_operator: CONTAINS
@@ -133,14 +142,15 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
-  field_terms_of_address:
-    weight: 3
+  field_profession:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
     settings:
+      match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   title:
     type: string_textfield
     weight: 0
@@ -151,9 +161,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_gender: true
-  field_name_part_terms_of_address: true
-  field_profession: true
   path: true
   promote: true
   sticky: true

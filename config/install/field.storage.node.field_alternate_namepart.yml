@@ -1,13 +1,13 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   enforced:
     module:
       - dragomans
-  module:
-    - node
-id: node.field_alternate_terms_of_address
-field_name: field_alternate_terms_of_address
+id: node.field_alternate_namepart
+field_name: field_alternate_namepart
 entity_type: node
 type: string
 settings:

@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.persontopersonrelation.field_person
+    - field.field.node.persontopersonrelation.field_role
     - node.type.persontopersonrelation
   enforced:
     module:
@@ -20,3 +21,4 @@ content:
     region: content
 hidden:
   field_person: true
+  field_role: true

@@ -3,6 +3,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.personpositionrelation.field_agency
+    - field.field.node.personpositionrelation.field_end_date_iso
+    - field.field.node.personpositionrelation.field_end_date_text
+    - field.field.node.personpositionrelation.field_end_date_type
+    - field.field.node.personpositionrelation.field_notes
+    - field.field.node.personpositionrelation.field_position
+    - field.field.node.personpositionrelation.field_start_date_iso
+    - field.field.node.personpositionrelation.field_start_date_text
+    - field.field.node.personpositionrelation.field_start_date_type
     - node.type.personpositionrelation
   enforced:
     module:
@@ -17,4 +26,13 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_agency: true
+  field_end_date_iso: true
+  field_end_date_text: true
+  field_end_date_type: true
+  field_notes: true
+  field_position: true
+  field_start_date_iso: true
+  field_start_date_text: true
+  field_start_date_type: true

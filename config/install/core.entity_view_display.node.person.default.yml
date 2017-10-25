@@ -4,18 +4,17 @@ dependencies:
   config:
     - field.field.node.person.field_alternate_family_name
     - field.field.node.person.field_alternate_given_name
-    - field.field.node.person.field_alternate_terms_of_address
+    - field.field.node.person.field_alternate_namepart
+    - field.field.node.person.field_associated_position
     - field.field.node.person.field_event
     - field.field.node.person.field_family_name
     - field.field.node.person.field_gender
     - field.field.node.person.field_given_name
     - field.field.node.person.field_language
-    - field.field.node.person.field_name_part_terms_of_address
+    - field.field.node.person.field_namepart
     - field.field.node.person.field_nation
     - field.field.node.person.field_p2p_role_relation
     - field.field.node.person.field_profession
-    - field.field.node.person.field_related_archival_object
-    - field.field.node.person.field_terms_of_address
     - node.type.person
   enforced:
     module:
@@ -37,14 +36,6 @@ content:
     type: string
     region: content
   field_alternate_given_name:
-    weight: 13
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_alternate_terms_of_address:
     weight: 5
     label: above
     settings:
@@ -52,8 +43,24 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_alternate_namepart:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_associated_position:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_event:
-    weight: 7
+    weight: 12
     label: above
     settings:
       view_mode: inline
@@ -70,7 +77,7 @@ content:
     type: string
     region: content
   field_gender:
-    weight: 6
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -85,12 +92,20 @@ content:
     type: string
     region: content
   field_language:
-    weight: 10
+    weight: 8
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_namepart:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_nation:
     weight: 9
@@ -101,7 +116,7 @@ content:
     type: entity_reference_label
     region: content
   field_p2p_role_relation:
-    weight: 12
+    weight: 13
     label: above
     settings:
       link: true
@@ -109,33 +124,16 @@ content:
     type: entity_reference_label
     region: content
   field_profession:
-    weight: 14
+    weight: 10
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_related_archival_object:
-    weight: 11
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_terms_of_address:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_name_part_terms_of_address: true
+hidden: {  }
