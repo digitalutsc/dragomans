@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.place.field_alternate_name
-    - field.field.node.place.field_description
+    - field.field.node.place.field_notes
     - node.type.place
   enforced:
     module:
@@ -23,7 +23,7 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_description:
+  field_notes:
     weight: 1
     label: above
     settings: {  }

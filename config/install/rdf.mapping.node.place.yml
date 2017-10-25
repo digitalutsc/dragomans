@@ -20,6 +20,3 @@ fieldMappings:
   field_alternate_name:
     properties:
       - 'schema:alternateName'
-  field_place_description:
-    properties:
-      - 'schema:description'

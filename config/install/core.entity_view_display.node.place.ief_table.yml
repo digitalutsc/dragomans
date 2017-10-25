@@ -4,7 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.ief_table
     - field.field.node.place.field_alternate_name
-    - field.field.node.place.field_description
+    - field.field.node.place.field_notes
     - node.type.place
   enforced:
     module:
@@ -16,13 +16,6 @@ targetEntityType: node
 bundle: place
 mode: ief_table
 content:
-  field_description:
-    type: basic_string
-    weight: 1
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   label:
     weight: 0
     region: content
@@ -30,5 +23,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_alternate_name: true
+  field_notes: true
   links: true
   status: true
