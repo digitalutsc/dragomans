@@ -2,18 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_start_date_text
-    - node.type.position
+    - node.type.personpositionrelation
   enforced:
     module:
       - dragomans
-id: node.position.field_start_date_text
-field_name: field_start_date_text
+id: node.personpositionrelation.title
+field_name: title
 entity_type: node
-bundle: position
-label: 'Position Start Date (Text)'
+bundle: personpositionrelation
+label: 'Person-Position-Relation Title'
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

@@ -8,11 +8,12 @@ dependencies:
     - field.field.node.person.field_alternate_terms_of_address
     - field.field.node.person.field_event
     - field.field.node.person.field_family_name
+    - field.field.node.person.field_gender
     - field.field.node.person.field_given_name
     - field.field.node.person.field_language
+    - field.field.node.person.field_name_part_terms_of_address
     - field.field.node.person.field_nation
     - field.field.node.person.field_p2p_role_relation
-    - field.field.node.person.field_position
     - field.field.node.person.field_profession
     - field.field.node.person.field_related_archival_object
     - field.field.node.person.field_terms_of_address
@@ -119,19 +120,6 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
-  field_position:
-    weight: 12
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: STARTS_WITH
-      override_labels: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex
-    region: content
   field_related_archival_object:
     weight: 13
     settings:
@@ -163,6 +151,8 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_gender: true
+  field_name_part_terms_of_address: true
   field_profession: true
   path: true
   promote: true

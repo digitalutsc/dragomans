@@ -2,27 +2,27 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_position
-    - node.type.person
-    - node.type.position
+    - field.storage.node.field_agency
+    - node.type.agency
+    - node.type.personpositionrelation
   enforced:
     module:
       - dragomans
-id: node.person.field_position
-field_name: field_position
+id: node.personpositionrelation.field_agency
+field_name: field_agency
 entity_type: node
-bundle: person
-label: Position
+bundle: personpositionrelation
+label: 'Position Agency'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      position: position
+      agency: agency
     sort:
       field: _none
     auto_create: false

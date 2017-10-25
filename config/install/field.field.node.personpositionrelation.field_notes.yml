@@ -2,22 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_date_type
-    - node.type.position
+    - field.storage.node.field_notes
+    - node.type.personpositionrelation
   enforced:
     module:
       - dragomans
-  module:
-    - options
-id: node.position.field_date_type
-field_name: field_date_type
+id: node.personpositionrelation.field_notes
+field_name: field_notes
 entity_type: node
-bundle: position
-label: 'Date Type'
+bundle: personpositionrelation
+label: Notes
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: list_string
+field_type: string_long

@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.position
+    - node.type.personpositionrelation
   enforced:
     module:
       - dragomans
   module:
     - node
-id: node.position
+id: node.personpositionrelation
 targetEntityType: node
-bundle: position
+bundle: personpositionrelation
 types:
   - 'schema:Thing'
 fieldMappings:
   title:
     properties:
       - 'schema:jobTitle'
-  field_notes:
+  field_agency:
     properties:
-      - 'dbpedia-owl:notes'
+      - 'schema:affiliation'

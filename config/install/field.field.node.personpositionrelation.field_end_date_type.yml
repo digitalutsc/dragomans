@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date_type
+    - node.type.personpositionrelation
+  enforced:
+    module:
+      - dragomans
+  module:
+    - options
+id: node.personpositionrelation.field_end_date_type
+field_name: field_end_date_type
+entity_type: node
+bundle: personpositionrelation
+label: 'Position End Date Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -10,7 +10,7 @@ id: node.position.title
 field_name: title
 entity_type: node
 bundle: position
-label: Position
+label: 'Position Name'
 description: ''
 required: true
 translatable: true

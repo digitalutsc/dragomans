@@ -3,16 +3,16 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_end_date_iso
-    - node.type.position
+    - node.type.personpositionrelation
   enforced:
     module:
       - dragomans
   module:
     - datetime
-id: node.position.field_end_date_iso
+id: node.personpositionrelation.field_end_date_iso
 field_name: field_end_date_iso
 entity_type: node
-bundle: position
+bundle: personpositionrelation
 label: 'Position End Date'
 description: ''
 required: false
