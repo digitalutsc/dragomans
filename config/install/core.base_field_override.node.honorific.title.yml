@@ -10,7 +10,7 @@ id: node.honorific.title
 field_name: title
 entity_type: node
 bundle: honorific
-label: Honorific
+label: 'Honorific Name'
 description: ''
 required: true
 translatable: true
