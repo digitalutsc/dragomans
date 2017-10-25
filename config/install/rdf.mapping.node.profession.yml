@@ -17,9 +17,6 @@ fieldMappings:
   title:
     properties:
       - 'dbpedia-owl:profession'
-  field_description:
-    properties:
-      - 'schema:description'
   field_notes:
     properties:
       - 'dbpedia-owl:notes'
