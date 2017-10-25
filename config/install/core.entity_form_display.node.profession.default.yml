@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.profession.field_description
     - field.field.node.profession.field_notes
     - node.type.profession
   enforced:
@@ -21,14 +20,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_description:
-    weight: 32
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_notes:
     weight: 33
     settings:

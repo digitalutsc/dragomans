@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.profession.field_description
     - field.field.node.profession.field_notes
     - node.type.profession
   enforced:
@@ -20,5 +19,4 @@ content:
     weight: 100
     region: content
 hidden:
-  field_description: true
   field_notes: true
