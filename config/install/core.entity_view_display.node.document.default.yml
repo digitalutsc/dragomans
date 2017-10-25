@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.document.field_place_document_sent
     - field.field.node.document.field_production_date_type
     - field.field.node.document.field_related_archival_object
+    - field.field.node.document.field_related_document
     - field.field.node.document.field_subject_agencies
     - field.field.node.document.field_subject_places
     - field.field.node.document.field_topic
@@ -32,7 +33,7 @@ bundle: document
 mode: default
 content:
   field_agencies_addressed:
-    weight: 11
+    weight: 10
     label: above
     settings:
       link: true
@@ -40,7 +41,7 @@ content:
     type: entity_reference_label
     region: content
   field_date:
-    weight: 5
+    weight: 4
     label: above
     settings:
       format_type: medium
@@ -49,7 +50,7 @@ content:
     type: datetime_default
     region: content
   field_date_text:
-    weight: 6
+    weight: 5
     label: above
     settings:
       link: true
@@ -57,7 +58,7 @@ content:
     type: entity_reference_label
     region: content
   field_document_genre:
-    weight: 19
+    weight: 17
     label: above
     settings:
       link: true
@@ -72,14 +73,6 @@ content:
     type: basic_string
     region: content
   field_language:
-    weight: 15
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_person_honorific_relation:
     weight: 14
     label: above
     settings:
@@ -87,30 +80,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_place:
-    weight: 7
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_place_document_sent:
-    weight: 8
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_production_date_type:
-    weight: 18
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_related_archival_object:
+  field_person_honorific_relation:
     weight: 13
     label: above
     settings:
@@ -118,15 +88,46 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_subject_agencies:
-    weight: 10
+  field_place:
+    weight: 6
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_subject_places:
+  field_place_document_sent:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_production_date_type:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_related_archival_object:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_related_document:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_subject_agencies:
     weight: 9
     label: above
     settings:
@@ -134,8 +135,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_subject_places:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_topic:
-    weight: 17
+    weight: 15
     label: above
     settings:
       link: true

@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.inline
+    - field.field.node.documentdocumentrelation.field_document
+    - field.field.node.documentdocumentrelation.field_document_relation
+    - node.type.documentdocumentrelation
+  enforced:
+    module:
+      - dragomans
+id: node.documentdocumentrelation.inline
+targetEntityType: node
+bundle: documentdocumentrelation
+mode: inline
+content:
+  field_document:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_document_relation:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true
+

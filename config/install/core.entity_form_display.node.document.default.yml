@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.document.field_place_document_sent
     - field.field.node.document.field_production_date_type
     - field.field.node.document.field_related_archival_object
+    - field.field.node.document.field_related_document
     - field.field.node.document.field_subject_agencies
     - field.field.node.document.field_subject_places
     - field.field.node.document.field_topic
@@ -35,7 +36,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 17
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -141,13 +142,13 @@ content:
     type: inline_entity_form_complex
     region: content
   field_production_date_type:
-    weight: 21
+    weight: 22
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_related_archival_object:
-    weight: 15
+    weight: 16
     settings:
       form_mode: inline
       label_singular: ''
@@ -155,6 +156,19 @@ content:
       allow_new: true
       allow_existing: true
       match_operator: CONTAINS
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_related_document:
+    weight: 15
+    settings:
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
       override_labels: false
     third_party_settings: {  }
     type: inline_entity_form_complex
@@ -216,7 +230,7 @@ content:
     region: content
   path:
     type: path
-    weight: 20
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -224,14 +238,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 19
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 19
+    weight: 20
     region: content
     third_party_settings: {  }
   title:
@@ -244,7 +258,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 16
+    weight: 17
     settings:
       match_operator: CONTAINS
       size: 60

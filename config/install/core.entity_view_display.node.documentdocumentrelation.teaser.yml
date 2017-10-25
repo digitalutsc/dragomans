@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.documentdocumentrelation
+  enforced:
+    module:
+      - dragomans
+  module:
+    - user
+id: node.documentdocumentrelation.teaser
+targetEntityType: node
+bundle: documentdocumentrelation
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }
