@@ -3,15 +3,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - node.type.documentrelation
+    - node.type.documentpersonrolerelation
   enforced:
     module:
       - dragomans
   module:
     - user
-id: node.documentrelation.teaser
+id: node.documentpersonrolerelation.teaser
 targetEntityType: node
-bundle: documentrelation
+bundle: documentpersonrolerelation
 mode: teaser
 content:
   links:

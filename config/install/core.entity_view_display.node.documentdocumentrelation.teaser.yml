@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.documentdocumentrelation.field_document_relation_type
     - node.type.documentdocumentrelation
   enforced:
     module:
@@ -17,4 +18,6 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_document: true
+  field_document_relation_type: true

@@ -3,32 +3,32 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.inline
-    - field.field.node.documentdocumentrelation.field_document
-    - field.field.node.documentdocumentrelation.field_document_relation_type
-    - node.type.documentdocumentrelation
+    - field.field.node.documentpersonrolerelation.field_document_person_role
+    - field.field.node.documentpersonrolerelation.field_person
+    - node.type.documentpersonrolerelation
   enforced:
     module:
       - dragomans
-id: node.documentdocumentrelation.inline
+id: node.documentpersonrolerelation.inline
 targetEntityType: node
-bundle: documentdocumentrelation
+bundle: documentpersonrolerelation
 mode: inline
 content:
-  field_document:
-    type: entity_reference_autocomplete
-    weight: 2
+  field_document_person_role:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
+  field_person:
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_document_relation_type:
-    type: options_select
-    weight: 1
+    type: entity_reference_autocomplete
     region: content
-    settings: {  }
-    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0

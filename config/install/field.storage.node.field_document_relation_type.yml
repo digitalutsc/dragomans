@@ -1,0 +1,80 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+    - options
+id: node.field_document_relation_type
+field_name: field_document_relation_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'part |'
+      label: partof
+    -
+      value: translation
+      label: translation
+    -
+      value: copy
+      label: copy
+    -
+      value: adaptation
+      label: adaptation
+    -
+      value: reply
+      label: reply
+    -
+      value: annotation
+      label: annotation
+    -
+      value: proximate
+      label: proximate
+    -
+      value: 'reverse translation'
+      label: 'reverse translation'
+    -
+      value: 'alternative translation'
+      label: 'alternative translation'
+    -
+      value: summary
+      label: summary
+    -
+      value: rescript
+      label: rescript
+    -
+      value: draft
+      label: draft
+    -
+      value: 'fair copy'
+      label: 'fair copy'
+    -
+      value: 'preparatory notes'
+      label: 'preparatory notes'
+    -
+      value: 'amended copy'
+      label: 'amended copy'
+    -
+      value: transliteration
+      label: transliteration
+    -
+      value: quotation
+      label: quotation
+    -
+      value: reference
+      label: reference
+    -
+      value: plagiarized
+      label: plagiarized
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -3,12 +3,13 @@ status: true
 dependencies:
   config:
     - field.field.node.documentdocumentrelation.field_document
-    - field.field.node.documentdocumentrelation.field_document_relation
+    - field.field.node.documentdocumentrelation.field_document_relation_type
     - node.type.documentdocumentrelation
   enforced:
     module:
       - dragomans
   module:
+    - options
     - user
 id: node.documentdocumentrelation.default
 targetEntityType: node
@@ -16,20 +17,19 @@ bundle: documentdocumentrelation
 mode: default
 content:
   field_document:
-    weight: 102
+    weight: 104
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_document_relation:
-    weight: 101
+  field_document_relation_type:
+    weight: 103
     label: above
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_label
+    type: list_default
     region: content
   links:
     weight: 100

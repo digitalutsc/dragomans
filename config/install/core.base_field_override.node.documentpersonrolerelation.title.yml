@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.documentrelation
+    - node.type.documentpersonrolerelation
   enforced:
     module:
       - dragomans
-id: node.documentrelation.title
+id: node.documentpersonrolerelation.title
 field_name: title
 entity_type: node
-bundle: documentrelation
-label: 'Document Relation Name'
+bundle: documentpersonrolerelation
+label: 'Document-Person-Role-Relation Name'
 description: ''
 required: true
 translatable: true

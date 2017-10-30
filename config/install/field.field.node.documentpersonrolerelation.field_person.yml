@@ -2,27 +2,27 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_document_relation
-    - node.type.documentdocumentrelation
-    - node.type.documentrelation
+    - field.storage.node.field_person
+    - node.type.documentpersonrolerelation
+    - node.type.person
   enforced:
     module:
       - dragomans
-id: node.documentdocumentrelation.field_document_relation
-field_name: field_document_relation
+id: node.documentpersonrolerelation.field_person
+field_name: field_person
 entity_type: node
-bundle: documentdocumentrelation
-label: 'Document Relation'
+bundle: documentpersonrolerelation
+label: Person
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      documentrelation: documentrelation
+      person: person
     sort:
       field: _none
     auto_create: false

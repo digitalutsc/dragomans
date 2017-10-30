@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.documentdocumentrelation.field_document
-    - field.field.node.documentdocumentrelation.field_document_relation
+    - field.field.node.documentdocumentrelation.field_document_relation_type
     - node.type.documentdocumentrelation
   enforced:
     module:
@@ -22,7 +22,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_document:
-    weight: 32
+    weight: 34
     settings:
       match_operator: CONTAINS
       size: 60
@@ -30,14 +30,11 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_document_relation:
-    weight: 31
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+  field_document_relation_type:
+    weight: 33
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   path:
     type: path

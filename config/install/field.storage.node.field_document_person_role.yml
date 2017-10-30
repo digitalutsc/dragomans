@@ -1,0 +1,77 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+    - options
+id: node.field_document_person_role
+field_name: field_document_person_role
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: addressee
+      label: addressee
+    -
+      value: advocate
+      label: advocate
+    -
+      value: annotator
+      label: annotator
+    -
+      value: 'attributed author'
+      label: 'attributed author'
+    -
+      value: author
+      label: author
+    -
+      value: buyer
+      label: buyer
+    -
+      value: editor
+      label: editor
+    -
+      value: executor
+      label: executor
+    -
+      value: quoted
+      label: quoted
+    -
+      value: reader
+      label: reader
+    -
+      value: recipient
+      label: recipient
+    -
+      value: resident
+      label: resident
+    -
+      value: seller
+      label: seller
+    -
+      value: sender
+      label: sender
+    -
+      value: 'series editor'
+      label: 'series editor'
+    -
+      value: signatory
+      label: signatory
+    -
+      value: translator
+      label: translator
+    -
+      value: witness
+      label: witness
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

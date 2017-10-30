@@ -11,9 +11,9 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: DocumentRelation
-type: documentrelation
-description: 'Properties describing relations between documents.'
+name: DocumentPersonRoleRelation
+type: documentpersonrolerelation
+description: 'Document -> Role -> Person Relation'
 help: ''
 new_revision: true
 preview_mode: 1

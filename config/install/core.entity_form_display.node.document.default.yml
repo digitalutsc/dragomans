@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.document.field_english_summary
     - field.field.node.document.field_language
     - field.field.node.document.field_person_honorific_relation
+    - field.field.node.document.field_person_role_relation
     - field.field.node.document.field_place
     - field.field.node.document.field_place_document_sent
     - field.field.node.document.field_production_date_type
@@ -36,12 +37,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 18
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
   field_agencies_addressed:
-    weight: 11
+    weight: 12
     settings:
       form_mode: inline
       label_singular: ''
@@ -73,7 +74,7 @@ content:
     type: inline_entity_form_complex_table_view_mode
     region: content
   field_document_genre:
-    weight: 13
+    weight: 14
     settings:
       form_mode: inline
       label_singular: ''
@@ -103,7 +104,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_person_honorific_relation:
-    weight: 14
+    weight: 18
     settings:
       form_mode: inline
       label_singular: ''
@@ -115,8 +116,21 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
+  field_person_role_relation:
+    weight: 17
+    settings:
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: STARTS_WITH
+      override_labels: false
+      allow_existing: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
   field_place:
-    weight: 7
+    weight: 8
     settings:
       form_mode: default
       label_singular: ''
@@ -129,7 +143,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_place_document_sent:
-    weight: 8
+    weight: 9
     settings:
       form_mode: inline
       label_singular: ''
@@ -142,7 +156,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_production_date_type:
-    weight: 22
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -161,20 +175,20 @@ content:
     type: inline_entity_form_complex
     region: content
   field_related_document:
+    type: inline_entity_form_complex
     weight: 15
+    region: content
     settings:
       form_mode: inline
       label_singular: ''
       label_plural: ''
       allow_new: true
-      allow_existing: true
-      match_operator: STARTS_WITH
+      match_operator: CONTAINS
       override_labels: false
+      allow_existing: false
     third_party_settings: {  }
-    type: inline_entity_form_complex
-    region: content
   field_subject_agencies:
-    weight: 10
+    weight: 11
     settings:
       form_mode: inline
       label_singular: ''
@@ -187,7 +201,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_subject_places:
-    weight: 9
+    weight: 10
     settings:
       form_mode: inline
       label_singular: ''
@@ -200,7 +214,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_topic:
-    weight: 12
+    weight: 13
     settings:
       form_mode: inline
       label_singular: ''
@@ -230,7 +244,7 @@ content:
     region: content
   path:
     type: path
-    weight: 21
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -238,14 +252,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 19
+    weight: 21
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 20
+    weight: 22
     region: content
     third_party_settings: {  }
   title:
@@ -258,7 +272,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 17
+    weight: 19
     settings:
       match_operator: CONTAINS
       size: 60

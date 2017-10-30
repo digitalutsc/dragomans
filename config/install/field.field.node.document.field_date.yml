@@ -13,7 +13,7 @@ id: node.document.field_date
 field_name: field_date
 entity_type: node
 bundle: document
-label: Date
+label: 'Production Date'
 description: ''
 required: false
 translatable: false
