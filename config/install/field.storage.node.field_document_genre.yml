@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+    module:
+    - dragomans
 id: node.field_document_genre
 field_name: field_document_genre
 entity_type: node
