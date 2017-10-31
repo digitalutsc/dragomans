@@ -4,6 +4,9 @@ dependencies:
   module:
     - node
     - options
+  enforced:
+    module:
+      - dragomans
 id: node.field_production_date_type
 field_name: field_production_date_type
 entity_type: node
@@ -27,4 +30,3 @@ translatable: true
 indexes: {  }
 persist_with_no_fields: false
 custom_storage: false
-

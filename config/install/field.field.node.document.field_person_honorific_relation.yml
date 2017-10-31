@@ -12,7 +12,7 @@ id: node.document.field_person_honorific_relation
 field_name: field_person_honorific_relation
 entity_type: node
 bundle: document
-label: 'Related People'
+label: 'Referenced Honorific'
 description: ''
 required: false
 translatable: false

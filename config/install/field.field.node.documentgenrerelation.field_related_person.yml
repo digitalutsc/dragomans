@@ -2,27 +2,27 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_date_text
-    - node.type.document
-    - node.type.textual_date
+    - field.storage.node.field_related_person
+    - node.type.documentgenrerelation
+    - node.type.person
   enforced:
     module:
       - dragomans
-id: node.document.field_date_text
-field_name: field_date_text
+id: node.documentgenrerelation.field_related_person
+field_name: field_related_person
 entity_type: node
-bundle: document
-label: 'Production Date (text)'
+bundle: documentgenrerelation
+label: 'Related Person'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      textual_date: textual_date
+      person: person
     sort:
       field: _none
     auto_create: false

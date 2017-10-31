@@ -5,7 +5,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.document.field_agencies_addressed
     - field.field.node.document.field_date
-    - field.field.node.document.field_date_text
     - field.field.node.document.field_document_genre
     - field.field.node.document.field_english_summary
     - field.field.node.document.field_language
@@ -13,7 +12,7 @@ dependencies:
     - field.field.node.document.field_person_role_relation
     - field.field.node.document.field_place
     - field.field.node.document.field_place_document_sent
-    - field.field.node.document.field_production_date_type
+    - field.field.node.document.field_production_date
     - field.field.node.document.field_related_archival_object
     - field.field.node.document.field_related_document
     - field.field.node.document.field_subject_agencies
@@ -55,12 +54,12 @@ content:
 hidden:
   field_agencies_addressed: true
   field_date: true
-  field_date_text: true
   field_document_genre: true
   field_person_honorific_relation: true
   field_person_role_relation: true
   field_place: true
   field_place_document_sent: true
+  field_production_date: true
   field_production_date_type: true
   field_related_archival_object: true
   field_related_document: true

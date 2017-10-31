@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_date_type
-    - node.type.textual_date
+    - field.storage.node.field_form_of_mediation
+    - node.type.documentgenrerelation
   enforced:
     module:
       - dragomans
   module:
     - options
-id: node.textual_date.field_date_type
-field_name: field_date_type
+id: node.documentgenrerelation.field_form_of_mediation
+field_name: field_form_of_mediation
 entity_type: node
-bundle: textual_date
-label: 'Date Type'
+bundle: documentgenrerelation
+label: 'Form of Mediation'
 description: ''
 required: false
 translatable: false

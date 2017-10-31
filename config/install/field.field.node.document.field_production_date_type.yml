@@ -4,9 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_production_date_type
     - node.type.document
-  enforced:
-    module:
-      - dragomans
   module:
     - options
 id: node.document.field_production_date_type
@@ -16,9 +13,8 @@ bundle: document
 label: 'Production Date Type'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: list_string
-

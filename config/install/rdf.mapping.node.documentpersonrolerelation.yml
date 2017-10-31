@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.documentpersonrolerelation
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.documentpersonrolerelation
+targetEntityType: node
+bundle: documentpersonrolerelation
+types:
+  - 'schema:Thing'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:name'
+  field_document_person_role:
+    properties:
+      - 'dragomans:document_person_role'
+  field_person:
+    properties:
+      - 'foaf:person'
+

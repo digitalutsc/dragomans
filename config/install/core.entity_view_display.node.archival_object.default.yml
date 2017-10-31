@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.field.node.archival_object.field_archival_identifier
     - field.field.node.archival_object.field_archival_path
-    - field.field.node.archival_object.field_date
-    - field.field.node.archival_object.field_date_text
     - field.field.node.archival_object.field_end_date_iso
     - field.field.node.archival_object.field_end_date_text
     - field.field.node.archival_object.field_end_date_type
@@ -112,6 +110,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_date: true
-  field_date_text: true
+hidden: {  }

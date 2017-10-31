@@ -7,21 +7,21 @@ dependencies:
   module:
     - node
     - options
-id: node.field_date_type
-field_name: field_date_type
+id: node.field_form_of_mediation
+field_name: field_form_of_mediation
 entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
-      value: Gregorian
-      label: Gregorian
+      value: 'declared to be'
+      label: 'declared to be'
     -
-      value: Hijri
-      label: Hijri
+      value: 'glossed as'
+      label: 'glossed as'
     -
-      value: Venetian
-      label: Venetian
+      value: 'implicit in form'
+      label: 'implicit in form'
   allowed_values_function: ''
 module: options
 locked: false

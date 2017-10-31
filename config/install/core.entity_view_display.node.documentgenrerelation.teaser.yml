@@ -3,6 +3,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.documentgenrerelation.field_genre
+    - field.field.node.documentgenrerelation.field_notes
     - node.type.documentgenrerelation
   enforced:
     module:
@@ -17,4 +19,6 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_genre: true
+  field_notes: true

@@ -5,7 +5,6 @@ dependencies:
     - core.entity_form_mode.node.inline
     - field.field.node.document.field_agencies_addressed
     - field.field.node.document.field_date
-    - field.field.node.document.field_date_text
     - field.field.node.document.field_document_genre
     - field.field.node.document.field_english_summary
     - field.field.node.document.field_language
@@ -13,6 +12,7 @@ dependencies:
     - field.field.node.document.field_person_role_relation
     - field.field.node.document.field_place
     - field.field.node.document.field_place_document_sent
+    - field.field.node.document.field_production_date
     - field.field.node.document.field_production_date_type
     - field.field.node.document.field_related_archival_object
     - field.field.node.document.field_related_document
@@ -27,7 +27,6 @@ dependencies:
       - dragomans
   module:
     - datetime
-    - ief_table_view_mode
     - inline_entity_form
     - path
 id: node.document.default
@@ -59,19 +58,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  field_date_text:
-    weight: 6
-    settings:
-      match_operator: CONTAINS
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: false
-    third_party_settings: {  }
-    type: inline_entity_form_complex_table_view_mode
     region: content
   field_document_genre:
     weight: 14
@@ -154,6 +140,14 @@ content:
       override_labels: false
     third_party_settings: {  }
     type: inline_entity_form_complex
+    region: content
+  field_production_date:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_production_date_type:
     weight: 7

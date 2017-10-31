@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.documentgenrerelation
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.documentgenrerelation
+targetEntityType: node
+bundle: documentgenrerelation
+types:
+  - 'schema:Thing'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:name'
+  field_form_of_mediation:
+    properties:
+      - 'dragomans:formOfMediation'
+  field_genre:
+    properties:
+      - 'schema:genre'
+  field_related_person:
+    properties:
+      - 'foaf:person'
+

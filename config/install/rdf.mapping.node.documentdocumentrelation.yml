@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.documentdocumentrelation
+  enforced:
+    module:
+      - dragomans
+  module:
+    - node
+id: node.documentdocumentrelation
+targetEntityType: node
+bundle: documentdocumentrelation
+types:
+  - 'schema:Thing'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:name'
+  field_document_relation_type:
+    properties:
+      - 'dcterms:relation'
+  field_document:
+    properties:
+      - 'schema:DigitalDocument'
+
