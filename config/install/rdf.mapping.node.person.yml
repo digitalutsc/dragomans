@@ -1,9 +1,4 @@
-
-
-
-
-
-
+uuid: f5c3f376-0802-4fc8-90f2-334cf2ebbb3f
 langcode: en
 status: true
 dependencies:
@@ -26,9 +21,17 @@ fieldMappings:
   field_given_name:
     properties:
       - 'schema:givenName'
-  field_event:
-    properties:
-      - 'schema:event'
   field_language:
     properties:
       - 'schema:inLanguage'
+  field_event:
+    properties:
+      - 'schema:event'
+  field_p2p_role_relation:
+    properties:
+      - 'dragomans:personToPersonRelation'
+  field_associated_position:
+    properties:
+      - 'dragomans:positionRelation'
+  
+
