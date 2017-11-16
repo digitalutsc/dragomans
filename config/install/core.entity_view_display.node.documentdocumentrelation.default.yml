@@ -2,13 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.documentdocumentrelation.field_cataloguer_date
     - field.field.node.documentdocumentrelation.field_document
     - field.field.node.documentdocumentrelation.field_document_relation_type
+    - field.field.node.documentdocumentrelation.field_glossed_date_text
+    - field.field.node.documentdocumentrelation.field_glossed_date_text_type
+    - field.field.node.documentdocumentrelation.field_reported_date
+    - field.field.node.documentdocumentrelation.field_reported_date_text
+    - field.field.node.documentdocumentrelation.field_reported_date_type
     - node.type.documentdocumentrelation
   enforced:
     module:
       - dragomans
   module:
+    - datetime
     - options
     - user
 id: node.documentdocumentrelation.default
@@ -16,6 +23,14 @@ targetEntityType: node
 bundle: documentdocumentrelation
 mode: default
 content:
+  field_cataloguer_date:
+    weight: 114
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_document:
     weight: 104
     label: above
@@ -26,6 +41,45 @@ content:
     region: content
   field_document_relation_type:
     weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_glossed_date_text:
+    weight: 110
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_glossed_date_text_type:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_reported_date:
+    weight: 107
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_reported_date_text:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_reported_date_type:
+    weight: 109
     label: above
     settings: {  }
     third_party_settings: {  }

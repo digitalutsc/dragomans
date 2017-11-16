@@ -2,13 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.documentdocumentrelation.field_cataloguer_date
     - field.field.node.documentdocumentrelation.field_document
     - field.field.node.documentdocumentrelation.field_document_relation_type
+    - field.field.node.documentdocumentrelation.field_glossed_date_text
+    - field.field.node.documentdocumentrelation.field_glossed_date_text_type
+    - field.field.node.documentdocumentrelation.field_reported_date
+    - field.field.node.documentdocumentrelation.field_reported_date_text
+    - field.field.node.documentdocumentrelation.field_reported_date_type
     - node.type.documentdocumentrelation
   enforced:
     module:
       - dragomans
   module:
+    - datetime
     - path
 id: node.documentdocumentrelation.default
 targetEntityType: node
@@ -21,6 +28,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_cataloguer_date:
+    weight: 44
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_document:
     weight: 34
     settings:
@@ -32,6 +47,40 @@ content:
     region: content
   field_document_relation_type:
     weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_glossed_date_text:
+    weight: 40
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_glossed_date_text_type:
+    weight: 43
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_reported_date:
+    weight: 37
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_reported_date_text:
+    weight: 38
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_reported_date_type:
+    weight: 39
     settings: {  }
     third_party_settings: {  }
     type: options_select

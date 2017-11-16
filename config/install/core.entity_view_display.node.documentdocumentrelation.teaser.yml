@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.documentdocumentrelation.field_document
     - field.field.node.documentdocumentrelation.field_document_relation_type
     - node.type.documentdocumentrelation
   enforced:

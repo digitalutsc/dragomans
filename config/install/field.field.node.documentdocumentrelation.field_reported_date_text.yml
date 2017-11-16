@@ -2,22 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_document_relation_type
+    - field.storage.node.field_reported_date_text
     - node.type.documentdocumentrelation
   enforced:
     module:
       - dragomans
-  module:
-    - options
-id: node.documentdocumentrelation.field_document_relation_type
-field_name: field_document_relation_type
+id: node.documentdocumentrelation.field_reported_date_text
+field_name: field_reported_date_text
 entity_type: node
 bundle: documentdocumentrelation
-label: 'Document Relation Type'
+label: 'Reported Production Date (Text)'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: list_string
+field_type: string
