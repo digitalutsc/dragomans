@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.document.field_document_genre
     - field.field.node.document.field_english_summary
     - field.field.node.document.field_language
+    - field.field.node.document.field_notes
     - field.field.node.document.field_person_honorific_relation
     - field.field.node.document.field_person_role_relation
     - field.field.node.document.field_place
@@ -72,6 +73,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_notes:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_person_honorific_relation:
     weight: 15

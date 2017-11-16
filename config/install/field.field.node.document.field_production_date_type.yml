@@ -10,7 +10,7 @@ id: node.document.field_production_date_type
 field_name: field_production_date_type
 entity_type: node
 bundle: document
-label: 'Production Date Type'
+label: 'Declared Production Date Type'
 description: ''
 required: false
 translatable: true

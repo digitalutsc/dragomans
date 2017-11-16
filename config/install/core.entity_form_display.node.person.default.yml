@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.person.field_language
     - field.field.node.person.field_namepart
     - field.field.node.person.field_nation
+    - field.field.node.person.field_notes
     - field.field.node.person.field_p2p_role_relation
     - field.field.node.person.field_profession
     - node.type.person
@@ -139,6 +140,14 @@ content:
       override_labels: false
     third_party_settings: {  }
     type: inline_entity_form_complex
+    region: content
+  field_notes:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_p2p_role_relation:
     weight: 14

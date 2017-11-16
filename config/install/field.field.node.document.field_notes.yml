@@ -2,20 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_production_date
+    - field.storage.node.field_notes
     - node.type.document
   enforced:
     module:
       - dragomans
-id: node.document.field_production_date
-field_name: field_production_date
+id: node.document.field_notes
+field_name: field_notes
 entity_type: node
 bundle: document
-label: 'Declared Production Date (Text)'
+label: Notes
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: string_long

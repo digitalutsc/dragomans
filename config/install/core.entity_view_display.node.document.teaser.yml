@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.document.field_place
     - field.field.node.document.field_place_document_sent
     - field.field.node.document.field_production_date
+    - field.field.node.document.field_production_date_type
     - field.field.node.document.field_related_archival_object
     - field.field.node.document.field_related_document
     - field.field.node.document.field_subject_agencies

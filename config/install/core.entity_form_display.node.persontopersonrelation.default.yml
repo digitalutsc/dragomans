@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.inline
+    - field.field.node.persontopersonrelation.field_notes
     - field.field.node.persontopersonrelation.field_person
     - field.field.node.persontopersonrelation.field_role
     - node.type.persontopersonrelation
@@ -23,6 +24,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_notes:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_person:
     weight: 1
     settings:

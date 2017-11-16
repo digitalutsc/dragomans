@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.person.field_language
     - field.field.node.person.field_namepart
     - field.field.node.person.field_nation
+    - field.field.node.person.field_notes
     - field.field.node.person.field_p2p_role_relation
     - field.field.node.person.field_profession
     - node.type.person
@@ -114,6 +115,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_notes:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_p2p_role_relation:
     weight: 13

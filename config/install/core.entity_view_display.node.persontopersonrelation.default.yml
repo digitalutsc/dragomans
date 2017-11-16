@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.persontopersonrelation.field_notes
     - field.field.node.persontopersonrelation.field_person
     - field.field.node.persontopersonrelation.field_role
     - node.type.persontopersonrelation
@@ -15,6 +16,13 @@ targetEntityType: node
 bundle: persontopersonrelation
 mode: default
 content:
+  field_notes:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_person:
     weight: 102
     label: above

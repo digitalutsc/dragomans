@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.document.field_document_genre
     - field.field.node.document.field_english_summary
     - field.field.node.document.field_language
+    - field.field.node.document.field_notes
     - field.field.node.document.field_person_honorific_relation
     - field.field.node.document.field_person_role_relation
     - field.field.node.document.field_place
@@ -88,6 +89,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_notes:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_person_honorific_relation:
     weight: 18
