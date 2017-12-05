@@ -1,3 +1,4 @@
+uuid: 7e56d237-9d43-420a-a9ef-885c62acbaaf
 langcode: en
 status: true
 dependencies:
@@ -8,6 +9,7 @@ dependencies:
     - field.field.node.document.field_document_genre
     - field.field.node.document.field_english_summary
     - field.field.node.document.field_language
+    - field.field.node.document.field_notes
     - field.field.node.document.field_person_honorific_relation
     - field.field.node.document.field_person_role_relation
     - field.field.node.document.field_place
@@ -32,6 +34,15 @@ targetEntityType: node
 bundle: document
 mode: teaser
 content:
+  field_document_genre:
+    type: entity_reference_entity_view
+    weight: 3
+    region: content
+    label: above
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
   field_english_summary:
     type: basic_string
     weight: 1
@@ -55,7 +66,7 @@ content:
 hidden:
   field_agencies_addressed: true
   field_date: true
-  field_document_genre: true
+  field_notes: true
   field_person_honorific_relation: true
   field_person_role_relation: true
   field_place: true
