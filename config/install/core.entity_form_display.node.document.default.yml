@@ -110,7 +110,7 @@ content:
       match_operator: STARTS_WITH
       override_labels: false
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: inline_entity_form_complex_table_view_mode
     region: content
   field_person_role_relation:
     weight: 17
@@ -123,7 +123,7 @@ content:
       override_labels: false
       allow_existing: false
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: inline_entity_form_complex_table_view_mode
     region: content
   field_place:
     weight: 8
@@ -168,15 +168,11 @@ content:
   field_related_archival_object:
     weight: 16
     settings:
-      form_mode: inline
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
       match_operator: CONTAINS
-      override_labels: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: entity_reference_autocomplete
     region: content
   field_related_document:
     type: inline_entity_form_complex_table_view_mode

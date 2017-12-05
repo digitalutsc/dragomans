@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.personhonorificrelation.field_honorific
     - field.field.node.personhonorificrelation.field_related_person
     - node.type.personhonorificrelation
   enforced:
@@ -19,4 +20,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_honorific: true
   field_related_person: true

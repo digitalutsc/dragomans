@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.ief_table
     - field.field.node.personhonorificrelation.field_honorific
     - field.field.node.personhonorificrelation.field_related_person
     - node.type.personhonorificrelation
@@ -10,30 +11,28 @@ dependencies:
       - dragomans
   module:
     - user
-id: node.personhonorificrelation.default
+id: node.personhonorificrelation.ief_table
 targetEntityType: node
 bundle: personhonorificrelation
-mode: default
+mode: ief_table
 content:
   field_honorific:
-    weight: 103
-    label: above
+    weight: 0
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_related_person:
-    weight: 102
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  label: true
+  links: true
+  status: true

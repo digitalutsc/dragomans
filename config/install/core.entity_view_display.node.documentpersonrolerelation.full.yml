@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.documentpersonrolerelation.field_document_person_role
     - field.field.node.documentpersonrolerelation.field_person
     - node.type.documentpersonrolerelation
@@ -11,29 +12,25 @@ dependencies:
   module:
     - options
     - user
-id: node.documentpersonrolerelation.default
+id: node.documentpersonrolerelation.full
 targetEntityType: node
 bundle: documentpersonrolerelation
-mode: default
+mode: full
 content:
   field_document_person_role:
-    weight: 101
+    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_person:
-    weight: 102
+    weight: 1
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  links: true

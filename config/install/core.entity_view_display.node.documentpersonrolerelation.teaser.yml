@@ -3,6 +3,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.documentpersonrolerelation.field_document_person_role
+    - field.field.node.documentpersonrolerelation.field_person
     - node.type.documentpersonrolerelation
   enforced:
     module:
@@ -17,4 +19,6 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_document_person_role: true
+  field_person: true

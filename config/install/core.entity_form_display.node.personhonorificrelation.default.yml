@@ -9,7 +9,6 @@ dependencies:
     module:
       - dragomans
   module:
-    - inline_entity_form
     - path
 id: node.personhonorificrelation.default
 targetEntityType: node
@@ -26,27 +25,19 @@ content:
     weight: 6
     settings:
       match_operator: CONTAINS
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: entity_reference_autocomplete
     region: content
   field_related_person:
     weight: 5
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
       match_operator: STARTS_WITH
-      override_labels: false
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: entity_reference_autocomplete
     region: content
   path:
     type: path
@@ -59,6 +50,13 @@ content:
     settings:
       display_label: true
     weight: 3
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
     region: content
     third_party_settings: {  }
   sticky:
