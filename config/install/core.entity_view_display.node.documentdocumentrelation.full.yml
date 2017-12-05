@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.node.inline
+    - core.entity_view_mode.node.full
     - field.field.node.documentdocumentrelation.field_cataloguer_date
     - field.field.node.documentdocumentrelation.field_document
     - field.field.node.documentdocumentrelation.field_document_relation_type
@@ -17,80 +17,74 @@ dependencies:
       - dragomans
   module:
     - datetime
-id: node.documentdocumentrelation.inline
+    - options
+    - user
+id: node.documentdocumentrelation.full
 targetEntityType: node
 bundle: documentdocumentrelation
-mode: inline
+mode: full
 content:
   field_cataloguer_date:
-    type: string_textfield
-    weight: 8
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_document:
-    type: entity_reference_autocomplete
-    weight: 2
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_document_relation_type:
-    type: options_select
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_glossed_date_text:
-    type: string_textfield
-    weight: 6
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_glossed_date_text_type:
-    type: options_select
     weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_reported_date:
-    type: datetime_default
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_reported_date_text:
-    type: string_textfield
-    weight: 4
-    region: content
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-  field_reported_date_type:
-    type: options_select
-    weight: 5
+    type: string
     region: content
-    settings: {  }
+  field_document:
+    weight: 1
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
-  title:
-    type: string_textfield
+    type: entity_reference_label
+    region: content
+  field_document_relation_type:
     weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
+    label: above
+    settings: {  }
     third_party_settings: {  }
+    type: list_default
+    region: content
+  field_glossed_date_text:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_glossed_date_text_type:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_reported_date:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_reported_date_text:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_reported_date_type:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
 hidden:
-  created: true
-  path: true
-  promote: true
-  status: true
-  sticky: true
-  uid: true
+  links: true

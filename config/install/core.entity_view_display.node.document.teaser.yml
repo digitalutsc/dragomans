@@ -1,4 +1,3 @@
-uuid: 7e56d237-9d43-420a-a9ef-885c62acbaaf
 langcode: en
 status: true
 dependencies:
@@ -58,6 +57,15 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+  field_related_document:
+    type: entity_reference_entity_view
+    weight: 4
+    region: content
+    label: above
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
   links:
     weight: 0
     region: content
@@ -74,7 +82,6 @@ hidden:
   field_production_date: true
   field_production_date_type: true
   field_related_archival_object: true
-  field_related_document: true
   field_subject_agencies: true
   field_subject_places: true
   field_topic: true

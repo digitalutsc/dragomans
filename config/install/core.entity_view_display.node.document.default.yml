@@ -1,4 +1,3 @@
-uuid: a5884a6b-7502-4f9d-b65a-2469d4fdb420
 langcode: en
 status: true
 dependencies:
@@ -139,12 +138,13 @@ content:
     type: entity_reference_label
     region: content
   field_related_document:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     weight: 12
     region: content
     label: above
     settings:
-      link: true
+      view_mode: full
+      link: false
     third_party_settings: {  }
   field_subject_agencies:
     weight: 10

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.ief_table
     - field.field.node.documentdocumentrelation.field_cataloguer_date
     - field.field.node.documentdocumentrelation.field_document
     - field.field.node.documentdocumentrelation.field_document_relation_type
@@ -16,21 +16,35 @@ dependencies:
     module:
       - dragomans
   module:
+    - options
     - user
-id: node.documentdocumentrelation.teaser
+id: node.documentdocumentrelation.ief_table
 targetEntityType: node
 bundle: documentdocumentrelation
-mode: teaser
+mode: ief_table
 content:
-  links:
-    weight: 100
+  field_document:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_document_relation_type:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
 hidden:
   field_cataloguer_date: true
-  field_document: true
-  field_document_relation_type: true
   field_glossed_date_text: true
   field_glossed_date_text_type: true
   field_reported_date: true
   field_reported_date_text: true
   field_reported_date_type: true
+  label: true
+  links: true
+  status: true

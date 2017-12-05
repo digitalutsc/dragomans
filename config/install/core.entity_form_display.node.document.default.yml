@@ -1,4 +1,3 @@
-uuid: 980713a1-c019-4d1f-8007-78928a65dbbe
 langcode: en
 status: true
 dependencies:
@@ -129,12 +128,12 @@ content:
   field_place:
     weight: 8
     settings:
-      form_mode: default
+      form_mode: inline
       label_singular: ''
       label_plural: ''
       allow_new: true
       allow_existing: true
-      match_operator: STARTS_WITH
+      match_operator: CONTAINS
       override_labels: false
     third_party_settings: {  }
     type: inline_entity_form_complex
@@ -180,7 +179,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_related_document:
-    type: inline_entity_form_complex
+    type: inline_entity_form_complex_table_view_mode
     weight: 15
     region: content
     settings:
