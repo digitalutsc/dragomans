@@ -1,3 +1,4 @@
+uuid: a5884a6b-7502-4f9d-b65a-2469d4fdb420
 langcode: en
 status: true
 dependencies:
@@ -55,9 +56,10 @@ content:
     weight: 18
     label: above
     settings:
-      link: true
+      view_mode: full
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_english_summary:
     weight: 1

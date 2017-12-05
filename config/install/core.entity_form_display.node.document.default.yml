@@ -1,3 +1,4 @@
+uuid: 980713a1-c019-4d1f-8007-78928a65dbbe
 langcode: en
 status: true
 dependencies:
@@ -28,6 +29,7 @@ dependencies:
       - dragomans
   module:
     - datetime
+    - ief_table_view_mode
     - inline_entity_form
     - path
 id: node.document.default
@@ -67,11 +69,11 @@ content:
       label_singular: ''
       label_plural: ''
       allow_new: true
-      allow_existing: true
       match_operator: STARTS_WITH
       override_labels: false
+      allow_existing: false
     third_party_settings: {  }
-    type: inline_entity_form_complex
+    type: inline_entity_form_complex_table_view_mode
     region: content
   field_english_summary:
     weight: 2
@@ -256,6 +258,13 @@ content:
     settings:
       display_label: true
     weight: 21
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
     region: content
     third_party_settings: {  }
   sticky:

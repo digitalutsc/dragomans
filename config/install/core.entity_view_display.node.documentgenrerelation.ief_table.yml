@@ -1,0 +1,50 @@
+uuid: bc34868c-51a3-47a4-9e3e-fabfb5d50b7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.ief_table
+    - field.field.node.documentgenrerelation.field_form_of_mediation
+    - field.field.node.documentgenrerelation.field_genre
+    - field.field.node.documentgenrerelation.field_notes
+    - field.field.node.documentgenrerelation.field_related_person
+    - node.type.documentgenrerelation
+  enforced:
+    module:
+      - dragomans
+  module:
+    - options
+    - user
+id: node.documentgenrerelation.ief_table
+targetEntityType: node
+bundle: documentgenrerelation
+mode: ief_table
+content:
+  field_form_of_mediation:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_genre:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_related_person:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_notes: true
+  label: true
+  links: true
+  status: true
