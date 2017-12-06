@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page
+    - node.type.document
+  enforced:
+    module:
+      - dragomans
+id: node.document.field_page
+field_name: field_page
+entity_type: node
+bundle: document
+label: Page
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
