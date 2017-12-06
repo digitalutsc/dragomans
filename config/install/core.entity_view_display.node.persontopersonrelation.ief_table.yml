@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.ief_table
+    - field.field.node.persontopersonrelation.field_notes
+    - field.field.node.persontopersonrelation.field_person
+    - field.field.node.persontopersonrelation.field_role
+    - node.type.persontopersonrelation
+  enforced:
+    module:
+      - dragomans
+  module:
+    - user
+id: node.persontopersonrelation.ief_table
+targetEntityType: node
+bundle: persontopersonrelation
+mode: ief_table
+content:
+  field_person:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_role:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_notes: true
+  label: true
+  links: true
+  status: true

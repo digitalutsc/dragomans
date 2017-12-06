@@ -1,0 +1,10 @@
+status: '1'
+pattern: ''
+php: 0
+escape: 0
+dependencies:
+  config:
+    - node.type.documentdocumentrelation
+  enforced:
+    module:
+      - dragomans

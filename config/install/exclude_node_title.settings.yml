@@ -1,0 +1,67 @@
+dependencies:
+  enforced:
+    module:
+      - dragomans
+nid_list: {  }
+translation_sync: true
+search: false
+content_types:
+  agency: none
+  archival_identifier: none
+  archival_object: none
+  article: none
+  document: none
+  documentdocumentrelation: all
+  documentgenrerelation: all
+  documentpersonrolerelation: all
+  event: none
+  event_type: none
+  genre: none
+  honorific: none
+  islandora_collection: none
+  islandora_image: none
+  language: none
+  nation: none
+  page: none
+  person: none
+  personhonorificrelation: all
+  personpositionrelation: all
+  persontopersonrelation: all
+  place: none
+  position: none
+  profession: none
+  role: none
+  topic: none
+content_type_modes:
+  agency: {  }
+  archival_identifier: {  }
+  archival_object: {  }
+  article: {  }
+  document: {  }
+  documentdocumentrelation:
+    - full
+  documentgenrerelation:
+    - full
+  documentpersonrolerelation:
+    - full
+  event: {  }
+  event_type: {  }
+  genre: {  }
+  honorific: {  }
+  islandora_collection: {  }
+  islandora_image: {  }
+  language: {  }
+  nation: {  }
+  page: {  }
+  person: {  }
+  personhonorificrelation:
+    - full
+  personpositionrelation:
+    - full
+  persontopersonrelation:
+    - full
+  place: {  }
+  position: {  }
+  profession: {  }
+  role: {  }
+  topic: {  }
