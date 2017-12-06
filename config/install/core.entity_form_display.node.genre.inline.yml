@@ -35,3 +35,4 @@ hidden:
   promote: true
   sticky: true
   uid: true
+  status: true

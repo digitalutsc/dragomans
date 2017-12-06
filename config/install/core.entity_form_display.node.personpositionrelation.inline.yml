@@ -63,7 +63,8 @@ content:
   field_position:
     weight: 1
     settings:
-      match_operator: CONTAINS
+      ma  status: true
+tch_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
@@ -103,3 +104,4 @@ hidden:
   promote: true
   sticky: true
   uid: true
+  status: true
