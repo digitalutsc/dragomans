@@ -5,3 +5,6 @@ core: 8.x
 package: Dragomans
 dependencies:
   - Fields:ief_table_view_mode
+  - Entity:auto_entitylabel
+  - Other:exclude_node_title
+
