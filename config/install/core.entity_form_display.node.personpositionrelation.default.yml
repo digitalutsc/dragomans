@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.personpositionrelation.field_end_date_type
     - field.field.node.personpositionrelation.field_notes
     - field.field.node.personpositionrelation.field_position
+    - field.field.node.personpositionrelation.field_source_person
     - field.field.node.personpositionrelation.field_start_date_iso
     - field.field.node.personpositionrelation.field_start_date_text
     - field.field.node.personpositionrelation.field_start_date_type
@@ -68,6 +69,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_source_person:
+    weight: 121
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_start_date_iso:
     weight: 2
     settings: {  }
@@ -88,6 +98,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0

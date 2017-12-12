@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.documentgenrerelation.field_genre
     - field.field.node.documentgenrerelation.field_notes
     - field.field.node.documentgenrerelation.field_related_person
+    - field.field.node.documentgenrerelation.field_source_document
     - node.type.documentgenrerelation
   enforced:
     module:
@@ -55,6 +56,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_source_document:
+    weight: 121
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   path:
     type: path
     weight: 9
@@ -66,6 +76,13 @@ content:
     settings:
       display_label: true
     weight: 7
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
     region: content
     third_party_settings: {  }
   sticky:

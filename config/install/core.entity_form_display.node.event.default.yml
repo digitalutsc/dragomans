@@ -8,8 +8,10 @@ dependencies:
     - field.field.node.event.field_end_date_text
     - field.field.node.event.field_end_date_type
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_import_id
     - field.field.node.event.field_notes
     - field.field.node.event.field_place
+    - field.field.node.event.field_source_person
     - field.field.node.event.field_start_date_iso
     - field.field.node.event.field_start_date_text
     - field.field.node.event.field_start_date_type
@@ -86,6 +88,14 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
+  field_import_id:
+    weight: 121
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_notes:
     weight: 11
     settings:
@@ -106,6 +116,15 @@ content:
       override_labels: false
     third_party_settings: {  }
     type: inline_entity_form_complex
+    region: content
+  field_source_person:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_start_date_iso:
     weight: 3
@@ -139,6 +158,13 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox

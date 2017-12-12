@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.documentpersonrolerelation.field_document_person_role
     - field.field.node.documentpersonrolerelation.field_person
+    - field.field.node.documentpersonrolerelation.field_source_document
     - node.type.documentpersonrolerelation
   enforced:
     module:
@@ -21,6 +22,15 @@ content:
     third_party_settings: {  }
   field_person:
     weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_source_document:
+    weight: 121
     settings:
       match_operator: CONTAINS
       size: 60

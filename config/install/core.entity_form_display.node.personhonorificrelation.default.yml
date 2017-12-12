@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.personhonorificrelation.field_honorific
     - field.field.node.personhonorificrelation.field_related_person
+    - field.field.node.personhonorificrelation.field_source_document
     - node.type.personhonorificrelation
   enforced:
     module:
@@ -34,6 +35,15 @@ content:
     weight: 5
     settings:
       match_operator: STARTS_WITH
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_source_document:
+    weight: 121
+    settings:
+      match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }

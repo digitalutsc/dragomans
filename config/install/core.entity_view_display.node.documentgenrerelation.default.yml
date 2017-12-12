@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.documentgenrerelation.field_genre
     - field.field.node.documentgenrerelation.field_notes
     - field.field.node.documentgenrerelation.field_related_person
+    - field.field.node.documentgenrerelation.field_source_document
     - node.type.documentgenrerelation
   enforced:
     module:
@@ -19,14 +20,14 @@ bundle: documentgenrerelation
 mode: default
 content:
   field_form_of_mediation:
-    weight: 2
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_genre:
-    weight: 1
+    weight: 2
     label: above
     settings:
       link: true
@@ -34,14 +35,22 @@ content:
     type: entity_reference_label
     region: content
   field_notes:
-    weight: 4
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_related_person:
-    weight: 3
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_source_document:
+    weight: 1
     label: above
     settings:
       link: true
