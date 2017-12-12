@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - dragomans
 id: document_person_cer
 label: document-person-cer
 enabled: true

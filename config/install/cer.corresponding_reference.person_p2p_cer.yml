@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - dragomans
 id: person_p2p_cer
 label: person-p2p-cer
 enabled: true

@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - dragomans
 id: genre_document_cer
 label: genre-document-cer
 enabled: true
