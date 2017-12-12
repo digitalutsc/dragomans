@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: document_document_cer
+label: document-document-cer
+enabled: true
+first_field: field_related_document
+second_field: field_source_document
+bundles:
+  node:
+    - document
+    - documentdocumentrelation

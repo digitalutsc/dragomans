@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: person_p2p_cer
+label: person-p2p-cer
+enabled: true
+first_field: field_p2p_role_relation
+second_field: field_source_person
+bundles:
+  node:
+    - person
+    - persontopersonrelation

@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: genre_document_cer
+label: genre-document-cer
+enabled: true
+first_field: field_document_genre
+second_field: field_source_document
+bundles:
+  node:
+    - document
+    - documentgenrerelation

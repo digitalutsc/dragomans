@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: person_event_cer
+label: person-event-cer
+enabled: true
+first_field: field_event
+second_field: field_source_person
+bundles:
+  node:
+    - event
+    - person

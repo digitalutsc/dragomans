@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: document_person_cer
+label: document-person-cer
+enabled: true
+first_field: field_person_role_relation
+second_field: field_source_document
+bundles:
+  node:
+    - document
+    - documentpersonrolerelation

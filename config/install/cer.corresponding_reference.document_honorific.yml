@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: document_honorific
+label: document-honorific
+enabled: true
+first_field: field_person_honorific_relation
+second_field: field_source_document
+bundles:
+  node:
+    - document
+    - personhonorificrelation

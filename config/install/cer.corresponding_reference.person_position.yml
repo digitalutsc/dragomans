@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: person_position
+label: person-position
+enabled: true
+first_field: field_associated_position
+second_field: field_source_person
+bundles:
+  node:
+    - person
+    - personpositionrelation
